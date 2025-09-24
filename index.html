@@ -25,10 +25,12 @@
     .card { background:var(--card); padding:16px; border-radius:12px; margin-top:16px; }
     .skills { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
     .skill { padding:6px 10px; border-radius:999px; background:rgba(255,255,255,0.03); font-size:13px; }
+    .projects-btn { display:inline-block; margin-top:12px; padding:8px 12px; border-radius:8px; background:#ff7b7b; color:#fff; font-weight:600; text-decoration:none; font-size:14px; }
+    table { width:100%; border-collapse: collapse; margin-top:8px; }
+    th, td { border:1px solid rgba(255,255,255,0.1); padding:8px; text-align:left; }
+    th { background:rgba(255,255,255,0.05); }
     footer { margin-top:10px; color:var(--muted); font-size:13px; text-align:center; padding:10px 0; }
     a.link { color:inherit; text-decoration:underline; }
-    pre { white-space:pre-wrap; font-family:inherit; color:var(--muted); }
-    .projects-btn { display:inline-block; margin-top:12px; padding:8px 12px; border-radius:8px; background:#ff7b7b; color:#fff; font-weight:600; text-decoration:none; font-size:14px; }
     @media(max-width:760px){.hero{flex-direction:column;align-items:flex-start}.grid{grid-template-columns:1fr}}
   </style>
 </head>
@@ -39,7 +41,7 @@
       <div class="avatar">PM</div>
       <div>
         <h1>Prince Mandhar</h1>
-        <p class="muted"><strong>Data Science & ML Engineer</strong> — B.Tech CS, 2021-25 <br>Certified in Data Science & ML/AI</p>
+        <p class="muted"><strong>Data Science & ML Engineer</strong> — B.Tech CS, 2021-25 <br>Certified in Data Science & ML</p>
         <a class="btn" href="Prince_ml__Profile.pdf" download>Download Resume (PDF)</a>
         <div style="margin-top:10px" class="muted">
           <div>Email: <a class="link" href="mailto:princemandhar@gmail.com">princemandhar@gmail.com</a></div>
@@ -79,27 +81,32 @@
       </div>
     </div>
 
-    <!-- Experience -->
+    <!-- Experience with Timeline -->
     <div class="card">
       <h3>Experience</h3>
-      <p class="muted"><strong>Data Science Intern — iNeuron.ai</strong> (Feb 2025 – Jun 2025) — Worked on preprocessing, feature engineering, supervised ML models (Random Forest, Decision Trees), and building end-to-end project pipelines. Gained hands-on experience with Python, Pandas, NumPy, Scikit-learn, Matplotlib, and Seaborn. Completed projects include Loan Approval Prediction, Hospital Data Analysis, and CNN Multi-Fruits Classification. Learned model evaluation, deployment basics, and data-driven decision-making.</p>
-      <p class="muted"><strong>Business Analyst — Bhargava Phytolab</strong> (Jul 2025 – Present) — Data extraction & automation from Dynamics 365, Power BI dashboards, zone & country-wise reports, process automation, improved forecast accuracy.</p>
-      <p class="muted"><strong>Data Science Trainee — Ducat India</strong> (Dec 2023 – Dec 2024) — Hands-on training and internship on real-world projects. Built projects including Loan Approval Prediction, Sales Analysis, and Customer Churn Prediction. Learned visualization (Matplotlib, Seaborn) and reporting tools like Power BI and Tableau. Enhanced understanding of ML algorithms, model evaluation, and deployment basics.</p>
+      <table>
+        <tr><th>Year</th><th>Role & Company</th><th>Details</th></tr>
+        <tr><td>2025</td><td>Business Analyst — Bhargava Phytolab</td><td>Data extraction & automation from Dynamics 365, Power BI dashboards, zone & country-wise reports, process automation, improved forecast accuracy.</td></tr>
+        <tr><td>2025</td><td>Data Science Intern — iNeuron.ai</td><td>Preprocessing, feature engineering, supervised ML models, end-to-end project pipelines. Completed projects: Loan Approval Prediction, Hospital Data Analysis, CNN Multi-Fruits Classification.</td></tr>
+        <tr><td>2024</td><td>Data Science Trainee — Ducat India</td><td>Hands-on training on real-world projects. Built projects: Loan Approval Prediction, Sales Analysis, Customer Churn Prediction. Worked with Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Power BI & Tableau.</td></tr>
+        <tr><td>2021-25</td><td>B.Tech — IIMT (AKTU)</td><td>Computer Science & Technology — CGPA: 7.8. Branch topper, student's captain, JEE Mains cleared, Data Science certifications.</td></tr>
+      </table>
     </div>
 
     <!-- Projects -->
     <div class="card">
       <h3>Projects (selected)</h3>
       <ul class="muted">
-        <li>Hospital Data Analysis — data cleaning, visualization, notebooks on GitHub.</li>
-        <li>Loan Approval Prediction — Random Forest & Decision Trees (created synthetic dataset & pipelines).</li>
-        <li>CNN Multi Fruits Classification — TensorFlow/Keras with augmentation.</li>
+        <li><a class="link" href="https://github.com/PrinceMandhar/Machine-learning" target="_blank">Machine Learning Projects</a> — Classification, regression, deep learning, data analysis with real-world datasets.</li>
+        <li><a class="link" href="https://github.com/PrinceMandhar/Deep-learning" target="_blank">Deep Learning Projects</a> — CNNs, TensorFlow/Keras, augmentation, hands-on deep learning tasks.</li>
+        <li><a class="link" href="https://github.com/PrinceMandhar/Data-Analysis-" target="_blank">Data Analysis Projects</a> — Python, NumPy, Pandas, Matplotlib, data cleaning, visualization, statistics.</li>
+        <li><a class="link" href="https://github.com/PrinceMandhar/Automated-MCQ-Generator-Using-Langchain-OpenAI-API-main" target="_blank">Automated MCQ Generator</a> — Using Langchain & OpenAI API.</li>
+        <li><a class="link" href="https://github.com/PrinceMandhar/DataAnalyzerApp_College" target="_blank">Data Analyzer App — College Project</a></li>
       </ul>
-      <a class="projects-btn" href="other-projects.html">Other Projects</a>
-      <p class="muted">Project notebooks: see GitHub links included in the resume PDF.</p>
+      <a class="projects-btn" href="https://github.com/PrinceMandhar" target="_blank">Other Projects on GitHub</a>
     </div>
 
-    <!-- Education & Achievements -->
+    <!-- Education -->
     <div class="card">
       <h3>Education & Achievements</h3>
       <p class="muted"><strong>B.Tech — Computer Science & Technology</strong>, IIMT (AKTU) — 2021–2025 — 7.8 CGPA</p>
@@ -120,7 +127,7 @@
       <a href="mailto:princemandhar@gmail.com" target="_blank">📧 Email</a> |
       <a href="https://github.com/PrinceMandhar" target="_blank">🐙 GitHub</a> |
       <a href="https://www.linkedin.com/in/princemandhar/" target="_blank">💼 LinkedIn</a> |
-      <a href="https://x.com/MandharMr?t=VJCN9LVLlTblFzYGw-3MRg&s=08" target="_blank"> ❌ Twitter</a>
+      <a href="https://x.com/MandharMr?t=VJCN9LVLlTblFzYGw-3MRg&s=08" target="_blank">🐦 Twitter</a>
     </div>
   </footer>
 </body>
