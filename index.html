@@ -4,35 +4,42 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Prince Mandhar — Portfolio</title>
-  <meta name="description" content="Prince Mandhar — Data Science & Business Analyst | Python, SQL, Power BI, Tableau">
+  <meta name="description" content="Prince Mandhar — Data Science & ML Engineer | Python, SQL, Power BI, Tableau">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0b1220;--card:rgba(255,255,255,0.03);--accent:#ffb86b;--muted:#94a3b8;font-family:Inter,system-ui,Arial;}
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#071027 0%, #07142a 100%);color:#e6eef8;line-height:1.5}
-    .wrap{max-width:1000px;margin:28px auto;padding:22px}
-    .hero{display:flex;gap:20px;align-items:center}
-    .avatar{width:120px;height:120px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#ff7b7b);display:flex;align-items:center;justify-content:center;font-weight:700;color:#071427;font-size:28px}
-    h1{margin:0;font-size:26px}
-    .muted{color:var(--muted)}
-    .btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:var(--accent);color:#071427;text-decoration:none;font-weight:600}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
-    .card{background:var(--card);padding:16px;border-radius:12px}
-    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .skill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:13px}
-    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
-    a.link{color:inherit;text-decoration:underline}
-    pre{white-space:pre-wrap;font-family:inherit;color:var(--muted)}
+    :root {
+      --bg:#0b1220;
+      --card:rgba(255,255,255,0.03);
+      --accent:#ffb86b;
+      --muted:#94a3b8;
+      font-family:Inter,system-ui,Arial;
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; background:linear-gradient(180deg,#071027 0%, #07142a 100%); color:#e6eef8; line-height:1.5; }
+    .wrap { max-width:1000px; margin:28px auto; padding:22px; }
+    .hero { display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+    .avatar { width:120px; height:120px; border-radius:14px; background:linear-gradient(135deg,var(--accent),#ff7b7b); display:flex; align-items:center; justify-content:center; font-weight:700; color:#071427; font-size:28px; }
+    h1 { margin:0; font-size:26px; }
+    .muted { color:var(--muted); }
+    .btn { display:inline-block; margin-top:12px; padding:10px 14px; border-radius:10px; background:var(--accent); color:#071427; text-decoration:none; font-weight:600; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:22px; }
+    .card { background:var(--card); padding:16px; border-radius:12px; margin-top:16px; }
+    .skills { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+    .skill { padding:6px 10px; border-radius:999px; background:rgba(255,255,255,0.03); font-size:13px; }
+    footer { margin-top:28px; color:var(--muted); font-size:13px; text-align:center; padding:10px 0; }
+    a.link { color:inherit; text-decoration:underline; }
+    pre { white-space:pre-wrap; font-family:inherit; color:var(--muted); }
     @media(max-width:760px){.hero{flex-direction:column;align-items:flex-start}.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <div class="wrap">
+    <!-- Hero Section -->
     <div class="hero">
       <div class="avatar">PM</div>
       <div>
         <h1>Prince Mandhar</h1>
-        <p class="muted">Business Analyst & Data Science professional — Python, SQL, Power BI, Tableau. (B.Tech CS, 2021-25)</p>
+        <p class="muted">Data Science & ML Engineer — Python, SQL, Power BI, Tableau. (B.Tech CS, 2021-25)</p>
         <a class="btn" href="Prince_ml__Profile.pdf" download>Download Resume (PDF)</a>
         <div style="margin-top:10px" class="muted">
           <div>Email: <a class="link" href="mailto:princemandhar@gmail.com">princemandhar@gmail.com</a></div>
@@ -40,81 +47,80 @@
           <div>Location: Noida, Sector 66</div>
           <div>LinkedIn: <a class="link" href="https://www.linkedin.com/in/princemandhar" target="_blank">linkedin.com/in/princemandhar</a></div>
           <div>GitHub: <a class="link" href="https://github.com/PrinceMandhar" target="_blank">github.com/PrinceMandhar</a></div>
+          <div>Twitter: <a class="link" href="https://x.com/MandharMr?t=VJCN9LVLlTblFzYGw-3MRg&s=08" target="_blank">@MandharMr</a></div>
         </div>
       </div>
     </div>
+
+    <!-- Profile Summary -->
     <div class="card">
       <h3>Profile Summary</h3>
-        <p class="muted">I specialize in Data Science and Data Engineering — I have built end-to-end ML pipelines, worked on predictive models,data preprocessing, feature engineering, visualization dashboards, and automation of reports. My journey includes developing Machine Learning and Deep Learning models, designing ETL workflows, and working with tools like Power BI, Tableau, and SQL databases.</p>
-        <p class="muted">Along with Data Science, I also bring strong <strong>Business Analysis</strong> experience — using data-driven insights to improve processes and decision-making.</p>
-      </div>
+      <p class="muted">I specialize in Data Science and Data Engineering — I have built end-to-end ML pipelines, worked on predictive models, data preprocessing, feature engineering, visualization dashboards, and automation of reports. My journey includes developing Machine Learning and Deep Learning models, designing ETL workflows, and working with tools like Power BI, Tableau, and SQL databases.</p>
+      <p class="muted">Along with Data Science, I also bring strong <strong>Business Analysis</strong> experience — using data-driven insights to improve processes and decision-making.</p>
+    </div>
 
-    
-      <div class="card">
-        <h3>Top Skills</h3>
-        <div class="skills">
-          <div class="skill">Python</div>
-          <div class="skill">Machine Learning (ML)</div>
-          <div class="skill">Deep Learning (DL)</div>
-          <div class="skill">ETL</div>
-          <div class="skill">Google Sheets</div>
-          <div class="skill">MySQL</div>
-          <div class="skill">SQL</div>
-          <div class="skill">Excel</div>
-          <div class="skill">Power BI</div>
-          <div class="skill">Tableau</div>
-          <div class="skill">Matplotlib</div>
-          <div class="skill">Seaborn</div>
-          <div class="skill">MS Word</div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Experience</h3>
-        <p class="muted"><strong>Business Analyst — Bhargava Phytolab</strong> (Jul 2025 – Present) — Data extraction & automation from Dynamics 365, Power BI dashboards, zone & country-wise reports, process automation, improved forecast accuracy.</p>
-        <p class="muted"><strong>Data Science Intern — iNeuron.ai</strong> (Feb 2025 – Jun 2025) — Preprocessing, feature engineering, supervised ML models, end-to-end project pipelines.</p>
-        <p class="muted"><strong>Data Science Trainee — Ducat India</strong> (Dec 2023 – Dec 2024) — Hands-on training and internship on real-world projects. Worked extensively with Python, Pandas, NumPy, and Scikit-learn. Built projects including Loan Approval Prediction, Sales Analysis, and Customer Churn Prediction. Gained practical exposure to visualization (Matplotlib, Seaborn) and reporting tools like Power BI and Tableau. Enhanced understanding of ML algorithms, model evaluation, and deployment basics.</p>
-      </div>
-
-      <div class="card">
-        <h3>Projects (selected)</h3>
-        <ul class="muted">
-          <li>Hospital Data Analysis — data cleaning, visualization, notebooks on GitHub.</li>
-          <li>Loan Approval Prediction — Random Forest & Decision Trees (created synthetic dataset & pipelines).</li>
-          <li>CNN Multi Fruits Classification — TensorFlow/Keras with augmentation.</li>
-        </ul>
-        <p class="muted">Project notebooks: see GitHub links included in the resume PDF.</p>
-      </div>
-
-      <div class="card">
-        <h3>Education & Achievements</h3>
-        <p class="muted"><strong>B.Tech — Computer Science & Technology</strong>, IIMT (AKTU) — 2021–2025 — 7.8 CGPA</p>
-        <p class="muted">Branch topper, former student's captain, cleared JEE Mains (2021), Data Science certificates from Ducat India & iNeuron.ai</p>
-      </div>
-
-      <div class="card">
-        <h3>Quick Links</h3>
-        <p class="muted"><a class="link" href="Prince_ml__Profile.pdf" download>Download full resume (PDF)</a></p>
-        <p class="muted">GitHub repositories and notebooks are linked inside the resume PDF.</p>
-      </div>
-
-      <div class="card">
-        <h3>Contact / Hire</h3>
-        <p class="muted">📩 If you’re looking to hire, please reach out to me directly —I am <strong>open to opportunities in Machine Learning, AI, Data Science, and Data Engineering</strong>.</p>
-
+    <!-- Top Skills -->
+    <div class="card">
+      <h3>Top Skills</h3>
+      <div class="skills">
+        <div class="skill">Python</div>
+        <div class="skill">Machine Learning (ML)</div>
+        <div class="skill">Deep Learning (DL)</div>
+        <div class="skill">ETL</div>
+        <div class="skill">Google Sheets</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Excel</div>
+        <div class="skill">Power BI</div>
+        <div class="skill">Tableau</div>
+        <div class="skill">Matplotlib</div>
+        <div class="skill">Seaborn</div>
+        <div class="skill">MS Word</div>
       </div>
     </div>
-    <footer>
-  <p>© 2025 Prince Mandhar</p>
-  <div style="margin-top:10px;">
-    <a href="mailto:princemandhar@gmail.com" target="_blank">📧 Email</a> |
-    <a href="https://github.com/PrinceMandhar" target="_blank">🐙 GitHub</a> |
-    <a href="https://www.linkedin.com/in/princemandhar/" target="_blank">💼 LinkedIn</a> |
-    <a href="https://x.com/MandharMr?t=VJCN9LVLlTblFzYGw-3MRg&s=08" target="_blank">🐦 Twitter</a> |
-    <a href="Prince_ml__Profile.pdf" download>📄 Resume</a>
+
+    <!-- Experience -->
+    <div class="card">
+      <h3>Experience</h3>
+      <p class="muted"><strong>Data Science Intern — iNeuron.ai</strong> (Feb 2025 – Jun 2025) — Worked on preprocessing, feature engineering, supervised ML models (Random Forest, Decision Trees), and building end-to-end project pipelines. Gained hands-on experience with Python, Pandas, NumPy, Scikit-learn, Matplotlib, and Seaborn. Completed projects include Loan Approval Prediction, Hospital Data Analysis, and CNN Multi-Fruits Classification. Learned model evaluation, deployment basics, and data-driven decision-making.</p>
+      <p class="muted"><strong>Business Analyst — Bhargava Phytolab</strong> (Jul 2025 – Present) — Data extraction & automation from Dynamics 365, Power BI dashboards, zone & country-wise reports, process automation, improved forecast accuracy.</p>
+      <p class="muted"><strong>Data Science Trainee — Ducat India</strong> (Dec 2023 – Dec 2024) — Hands-on training and internship on real-world projects. Built projects including Loan Approval Prediction, Sales Analysis, and Customer Churn Prediction. Learned visualization (Matplotlib, Seaborn) and reporting tools like Power BI and Tableau. Enhanced understanding of ML algorithms, model evaluation, and deployment basics.</p>
+    </div>
+
+    <!-- Projects -->
+    <div class="card">
+      <h3>Projects (selected)</h3>
+      <ul class="muted">
+        <li>Hospital Data Analysis — data cleaning, visualization, notebooks on GitHub.</li>
+        <li>Loan Approval Prediction — Random Forest & Decision Trees (created synthetic dataset & pipelines).</li>
+        <li>CNN Multi Fruits Classification — TensorFlow/Keras with augmentation.</li>
+      </ul>
+      <p class="muted">Project notebooks: see GitHub links included in the resume PDF.</p>
+    </div>
+
+    <!-- Education & Achievements -->
+    <div class="card">
+      <h3>Education & Achievements</h3>
+      <p class="muted"><strong>B.Tech — Computer Science & Technology</strong>, IIMT (AKTU) — 2021–2025 — 7.8 CGPA</p>
+      <p class="muted">Branch topper, former student's captain, cleared JEE Mains (2021), Data Science certificates from Ducat India & iNeuron.ai.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="card">
+      <h3>Contact / Hire</h3>
+      <p class="muted">📩 If you’re looking to hire, please reach out to me directly — I am <strong>open to opportunities in Machine Learning, AI, Data Science, and Data Engineering</strong>.</p>
+    </div>
   </div>
 
-  <script>document.getElementById('yr').innerText=new Date().getFullYear();</script>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Prince Mandhar</p>
+    <div style="margin-top:5px;">
+      <a href="mailto:princemandhar@gmail.com" target="_blank">📧 Email</a> |
+      <a href="https://github.com/PrinceMandhar" target="_blank">🐙 GitHub</a> |
+      <a href="https://www.linkedin.com/in/princemandhar/" target="_blank">💼 LinkedIn</a> |
+      <a href="https://x.com/MandharMr?t=VJCN9LVLlTblFzYGw-3MRg&s=08" target="_blank">🐦 Twitter</a>
+    </div>
+  </footer>
 </body>
 </html>
