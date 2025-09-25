@@ -1,61 +1,180 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{line-height:1.6;color:#333;}
-a{text-decoration:none;}
-ul{list-style:none;}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prince Mandhar Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-/* Navbar */
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 30px;
-  position:fixed;
-  width:100%;
-  top:0;
-  background:rgba(0,0,0,0.6);
-  z-index:1000;
-}
-.logo-img{width:60px;border-radius:50%;border:2px solid #ff4b5c;animation:rotate 5s linear infinite;}
-@keyframes rotate{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
-nav ul{display:flex; gap:25px;}
-nav ul li a{color:#fff;font-weight:500;}
-#menu-toggle,#menu-close{display:none;color:#fff;font-size:28px;cursor:pointer;}
-#nav-links{position:fixed;top:0;right:-220px;width:220px;height:100%;background:#0f172a;flex-direction:column;padding-top:70px;transition:.3s;}
-#nav-links.active{right:0;}
-.menu-header{display:flex;align-items:center;gap:10px;padding:15px 20px;border-bottom:1px solid rgba(255,255,255,0.3);}
-.menu-logo{width:40px;height:40px;border-radius:50%;border:2px solid #ff4b5c;}
-.menu-name{color:#fff;font-weight:600;font-size:18px;}
+<!-- Header Section -->
+<header id="header">
+  <div class="overlay"></div>
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="Prince Mandhar Logo" class="logo-img">
+    </div>
+    <ul id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <i class="fa-solid fa-ellipsis-vertical" id="menu-toggle"></i>
+    <i class="fa-solid fa-xmark" id="menu-close"></i>
+  </nav>
+  <div class="header-text">
+    <h1>Prince <span>Mandhar</span></h1>
+    <p>Data Science | Data Engineer | AI/ML | Contact for Hire</p>
+    <a href="princemandhar_resume.pdf" class="btn" target="_blank">Download Resume</a>
+  </div>
+</header>
 
-/* Hero */
-#header{position:relative;height:100vh;text-align:center;color:#fff;}
-#header .overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:0;}
-.header-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1;}
-.header-text h1 span{color:#ff4b5c;}
-.btn{display:inline-block;background:#ff4b5c;color:#fff;padding:12px 30px;border-radius:30px;margin-top:20px;font-weight:600;transition:.3s;}
-.btn:hover{background:#0f172a;}
+<!-- About Section -->
+<section id="about">
+  <div class="container about-container">
+    <div class="about-col-1">
+      <div class="profile-image-container-square">
+        <img src="db.jpg" alt="Prince Mandhar">
+      </div>
+    </div>
+    <div class="about-col-2">
+      <h2 class="sub-title">Profile Summary</h2>
+      <p>
+        Business Analyst & Data Science professional with expertise in Microsoft Dynamics 365 Business Central, Python, SQL, Power BI, and Tableau. Skilled in Machine Learning, Data Engineering, and data visualization to deliver actionable insights. Experienced in building automated data pipelines, KPI dashboards, and predictive models to optimize decision-making and drive business growth.
+      </p>
+      <h3>Skills</h3>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>SQL</li>
+        <li>Power BI</li>
+        <li>Tableau</li>
+        <li>MS Excel</li>
+        <li>Google Sheets</li>
+        <li>MySQL</li>
+        <li>Pandas, NumPy</li>
+        <li>Matplotlib, Seaborn</li>
+        <li>Machine Learning</li>
+        <li>Deep Learning</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-/* About */
-#about{padding:80px 20px;background:#fff;}
-.about-container{display:flex;flex-wrap:wrap;gap:30px;max-width:1200px;margin:auto;}
-.about-col-1,.about-col-2{flex:1;}
-.profile-image-container-rect{width:300px;height:350px;overflow:hidden;margin:auto;}
-.profile-image-container-rect img{width:100%;height:100%;object-fit:cover;}
-.sub-title{font-size:32px;color:#0f172a;margin-bottom:20px;}
-.skills-list{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:15px;}
-.skills-list li{background:#ff4b5c;color:#fff;padding:8px 15px;border-radius:20px;}
+<!-- Projects Section -->
+<section id="projects">
+  <div class="container">
+    <h2 class="sub-title">Projects</h2>
+    <div class="project-list">
+      <div class="project-item">
+        <h2>Machine Learning Projects</h2>
+        <p>Hands-on ML projects using Python.</p>
+        <a href="https://github.com/PrinceMandhar/Machine-learning" target="_blank">View Project</a>
+      </div>
+      <div class="project-item">
+        <h2>Deep Learning</h2>
+        <p>Experiments with ANN, CNN, and RNN models.</p>
+        <a href="https://github.com/PrinceMandhar/Deep-learning" target="_blank">View Project</a>
+      </div>
+      <div class="project-item">
+        <h2>Data Analysis</h2>
+        <p>Python-based analysis with Pandas, Numpy, Matplotlib.</p>
+        <a href="https://github.com/PrinceMandhar/Data-Analysis-" target="_blank">View Project</a>
+      </div>
+      <div class="project-item">
+        <h2>Automated MCQ Generator</h2>
+        <p>LangChain + OpenAI API-based Question Generator.</p>
+        <a href="https://github.com/PrinceMandhar/Automated-MCQ-Generator-Using-Langchain-OpenAI-API-main" target="_blank">View Project</a>
+      </div>
+      <div class="project-item">
+        <h2>Data Analyzer App</h2>
+        <p>GUI-based Data Analyzer built with Python Tkinter + Plotly.</p>
+        <a href="https://github.com/PrinceMandhar/DataAnalyzerApp_College" target="_blank">View Project</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-/* Projects */
-#projects{padding:80px 20px;background:#f5f5f5;}
-.project-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;}
-.project-item{background:#fff;padding:30px;border-radius:15px;box-shadow:0 0 15px rgba(0,0,0,0.1);text-align:center;}
-.project-item h2{color:#0f172a;margin-bottom:10px;}
-.project-item a{color:#ff4b5c;margin-top:10px;display:inline-block;}
+<!-- 3D Cube Section -->
+<section id="cube">
+  <div class="cube-container">
+    <div class="cube">
+      <div class="face front"><a href="https://instagram.com/PrinceMandhar" target="_blank"><img src="instagram.png" alt="Instagram"></a></div>
+      <div class="face back"><a href="https://linkedin.com/PrinceMandhar" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a></div>
+      <div class="face right"><a href="https://github.com/PrinceMandhar" target="_blank"><img src="github.png" alt="GitHub"></a></div>
+      <div class="face left"><a href="https://x.com/MandharMr" target="_blank"><img src="x.png" alt="X/Twitter"></a></div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
+    </div>
+  </div>
+</section>
 
-/* 3D Cube */
-#cube-section{padding:50px 20px;text-align:center;background:#fff;}
-#cube-toggle{margin-bottom:20px;}
-.cube-container{perspective:1000px;transition:.5s;}
-.cube-container.collapsed .cube{transform:scale(0);}
-.cube{width:100px;height:100px;position:relative;transform-style:preserve-3d;animation:rotateCube 10s infinite linear;margin:auto;}
-.cube .face{position:absolute;width:100px;height:100px;background:#ff4b5c;display:flex;justify-content:center;align-items:center;border-radius:20px;}
-.cube .face img{width:
+<!-- Experience Section -->
+<section id="experience">
+  <div class="container">
+    <h2 class="sub-title">Experience</h2>
+    <ul>
+      <li><strong>Business Analyst — Bhargava Phytolab</strong><br>
+      Automated reporting from Dynamics 365, built KPI dashboards in Power BI, improved forecasting accuracy by 20%.
+      </li>
+      <li><strong>Data Science Intern — iNeuron.ai</strong><br>
+      Developed ML models, feature pipelines, and end-to-end data solutions for real-world datasets.
+      </li>
+      <li><strong>Data Science Trainee — Ducat India</strong><br>
+      Completed projects on churn prediction, loan approval, and CNN-based image classification.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Contact Form Section -->
+<section id="contact">
+  <div class="container contact-container">
+    <h2 class="sub-title">Contact Me</h2>
+    <form action="mailto:princemandhar@gmail.com" method="post" enctype="text/plain" class="contact-form">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Mail</button>
+    </form>
+  </div>
+</section>
+
+<!-- Floating Social Slide -->
+<div class="social-slide" id="social-slide">
+  <a href="https://instagram.com/PrinceMandhar" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+  <a href="https://linkedin.com/PrinceMandhar" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+  <a href="https://github.com/PrinceMandhar" target="_blank"><img src="github.png" alt="GitHub"></a>
+  <a href="https://x.com/MandharMr" target="_blank"><img src="x.png" alt="X/Twitter"></a>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>@ Prince Mandhar - Site made by Prince</p>
+</footer>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const menuClose = document.getElementById('menu-close');
+const navLinks = document.getElementById('nav-links');
+const socialSlide = document.getElementById('social-slide');
+
+menuToggle.addEventListener('click', () => {
+  socialSlide.classList.add('active');
+});
+
+menuClose.addEventListener('click', () => {
+  socialSlide.classList.remove('active');
+});
+
+window.addEventListener('click', (e) => {
+  if (!e.target.closest('#menu-toggle') && !e.target.closest('.social-slide')) {
+    socialSlide.classList.remove('active');
+  }
+});
+</script>
+
+</body>
+</html>
