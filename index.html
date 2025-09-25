@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prince Mandhar Portfolio</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prince Mandhar Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<!-- Navbar -->
-<nav>
-  <div class="logo">
-    <img src="Logo.png" alt="Prince Mandhar Logo" class="logo-img">
-  </div>
-  <ul id="nav-links">
-    <li class="menu-header">
-      <img src="Logo.png" alt="Prince Mandhar Logo" class="menu-logo">
-      <span class="menu-name">Prince Mandhar</span>
-    </li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <i class="fa-solid fa-ellipsis-vertical" id="menu-toggle"></i>
-  <i class="fa-solid fa-xmark" id="menu-close"></i>
-</nav>
-
-<!-- Hero Section -->
+<!-- Header Section -->
 <header id="header">
   <div class="overlay"></div>
-  <img src="desktop.jpg" class="desktop-bg">
-  <img src="phone.jpg" class="phone-bg">
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="Prince Mandhar Logo" class="logo-img">
+    </div>
+    <ul id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <i class="fa-solid fa-ellipsis-vertical" id="menu-toggle"></i>
+    <i class="fa-solid fa-xmark" id="menu-close"></i>
+  </nav>
   <div class="header-text">
     <h1>Prince <span>Mandhar</span></h1>
     <p>Data Science | Data Engineer | AI/ML | Contact for Hire</p>
-    <a href="Prince_ml__Profile.pdf" class="btn" target="_blank">Download Resume</a>
+    <a href="princemandhar_resume.pdf" class="btn" target="_blank">Download Resume</a>
   </div>
 </header>
 
@@ -44,14 +36,14 @@
 <section id="about">
   <div class="container about-container">
     <div class="about-col-1">
-      <div class="profile-image-container-rect">
-        <img src="my iamge.jpg" alt="Prince Mandhar">
+      <div class="profile-image-container-square">
+        <img src="db.jpg" alt="Prince Mandhar">
       </div>
     </div>
     <div class="about-col-2">
       <h2 class="sub-title">Profile Summary</h2>
       <p>
-        Data Science | Data Engineering | AI/ML professional. Experienced in Python, SQL, Power BI, Tableau, and building ML/AI pipelines, predictive models, automated dashboards, and actionable insights.
+        Business Analyst & Data Science professional with expertise in Microsoft Dynamics 365 Business Central, Python, SQL, Power BI, and Tableau. Skilled in Machine Learning, Data Engineering, and data visualization to deliver actionable insights. Experienced in building automated data pipelines, KPI dashboards, and predictive models to optimize decision-making and drive business growth.
       </p>
       <h3>Skills</h3>
       <ul class="skills-list">
@@ -105,17 +97,16 @@
   </div>
 </section>
 
-<!-- Foldable 3D Cube Section -->
-<section id="cube-section">
-  <button id="cube-toggle" class="btn">Toggle 3D Cube</button>
-  <div class="cube-container" id="cube-container">
+<!-- 3D Cube Section -->
+<section id="cube">
+  <div class="cube-container">
     <div class="cube">
-      <div class="face front"><a href="https://instagram.com/PrinceMandhar" target="_blank"><img src="Instagram.webp" alt="Instagram"></a></div>
-      <div class="face back"><a href="https://linkedin.com/PrinceMandhar" target="_blank"><img src="linkedin.webp" alt="LinkedIn"></a></div>
-      <div class="face right"><a href="https://github.com/PrinceMandhar" target="_blank"><img src="GitHub-Mark.png" alt="GitHub"></a></div>
-      <div class="face left"><a href="https://x.com/MandharMr" target="_blank"><img src="X.png" alt="X/Twitter"></a></div>
-      <div class="face top"><img src="Logo.png" alt="Logo"></div>
-      <div class="face bottom"><img src="Logo.png" alt="Logo"></div>
+      <div class="face front"><a href="https://instagram.com/PrinceMandhar" target="_blank"><img src="instagram.png" alt="Instagram"></a></div>
+      <div class="face back"><a href="https://linkedin.com/PrinceMandhar" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a></div>
+      <div class="face right"><a href="https://github.com/PrinceMandhar" target="_blank"><img src="github.png" alt="GitHub"></a></div>
+      <div class="face left"><a href="https://x.com/MandharMr" target="_blank"><img src="x.png" alt="X/Twitter"></a></div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
     </div>
   </div>
 </section>
@@ -129,7 +120,7 @@
       Automated reporting from Dynamics 365, built KPI dashboards in Power BI, improved forecasting accuracy by 20%.
       </li>
       <li><strong>Data Science Intern — iNeuron.ai</strong><br>
-      Developed ML models, feature pipelines, and end-to-end data solutions.
+      Developed ML models, feature pipelines, and end-to-end data solutions for real-world datasets.
       </li>
       <li><strong>Data Science Trainee — Ducat India</strong><br>
       Completed projects on churn prediction, loan approval, and CNN-based image classification.
@@ -151,14 +142,16 @@
   </div>
 </section>
 
+<!-- Floating Social Slide -->
+<div class="social-slide" id="social-slide">
+  <a href="https://instagram.com/PrinceMandhar" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+  <a href="https://linkedin.com/PrinceMandhar" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+  <a href="https://github.com/PrinceMandhar" target="_blank"><img src="github.png" alt="GitHub"></a>
+  <a href="https://x.com/MandharMr" target="_blank"><img src="x.png" alt="X/Twitter"></a>
+</div>
+
 <!-- Footer -->
 <footer>
-  <div class="footer-social">
-    <a href="https://instagram.com/PrinceMandhar" target="_blank"><img src="Instagram.webp" alt="Instagram"></a>
-    <a href="https://linkedin.com/PrinceMandhar" target="_blank"><img src="linkedin.webp" alt="LinkedIn"></a>
-    <a href="https://github.com/PrinceMandhar" target="_blank"><img src="GitHub-Mark.png" alt="GitHub"></a>
-    <a href="https://x.com/MandharMr" target="_blank"><img src="X.png" alt="X/Twitter"></a>
-  </div>
   <p>@ Prince Mandhar - Site made by Prince</p>
 </footer>
 
@@ -166,20 +159,20 @@
 const menuToggle = document.getElementById('menu-toggle');
 const menuClose = document.getElementById('menu-close');
 const navLinks = document.getElementById('nav-links');
-const cubeContainer = document.getElementById('cube-container');
-const cubeToggle = document.getElementById('cube-toggle');
+const socialSlide = document.getElementById('social-slide');
 
-menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
-menuClose.addEventListener('click', () => navLinks.classList.remove('active'));
-
-document.addEventListener('click', e => {
-  if(!navLinks.contains(e.target) && !menuToggle.contains(e.target)){
-    navLinks.classList.remove('active');
-  }
+menuToggle.addEventListener('click', () => {
+  socialSlide.classList.add('active');
 });
 
-cubeToggle.addEventListener('click', () => {
-  cubeContainer.classList.toggle('collapsed');
+menuClose.addEventListener('click', () => {
+  socialSlide.classList.remove('active');
+});
+
+window.addEventListener('click', (e) => {
+  if (!e.target.closest('#menu-toggle') && !e.target.closest('.social-slide')) {
+    socialSlide.classList.remove('active');
+  }
 });
 </script>
 
