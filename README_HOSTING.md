@@ -21,12 +21,7 @@ This package contains:
 3. GitHub Pages usually publishes automatically for a repo named `username.github.io`. Otherwise go to repo -> Settings -> Pages and set the source to the main branch root.
 4. Your shareable link will be `https://<your-github-username>.github.io/` (or `https://<your-github-username>.github.io/<repo>/` for project pages).
 
-### Option B — Netlify (easiest GUI, drag & drop)
-1. Go to https://app.netlify.com/drop and drag the contents of this ZIP (extract first).
-2. Netlify will deploy and give you a random `https://something.netlify.app` link instantly.
-3. You can change the site name in settings for a nicer subdomain.
-
-### Option C — Use a custom domain (thevanshgarg.com)
+### Option 
 1. Buy the domain from any registrar (Namecheap/GoDaddy).
 2. For Netlify: add domain in site settings -> Domains -> Add custom domain. Netlify will give you the DNS record (CNAME or A) to add in your registrar.
 3. For GitHub Pages: create `CNAME` file with your domain and add A records pointing to GitHub Pages IPs:
