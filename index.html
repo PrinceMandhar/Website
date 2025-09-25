@@ -1,124 +1,208 @@
-<!doctype html>
-<html lang="hi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Prince Mandhar — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg:#0b1220;
-      --card:rgba(255,255,255,0.03);
-      --accent:#ffb86b;
-      --muted:#94a3b8;
-      font-family:Inter,system-ui,Arial;
-    }
-    * { box-sizing:border-box; }
-    body { margin:0; background:linear-gradient(180deg,#071027 0%, #07142a 100%); color:#e6eef8; line-height:1.5; }
-    .wrap { max-width:1000px; margin:28px auto; padding:22px; }
-    .hero { display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
-    .avatar { width:120px; height:120px; border-radius:14px; background:linear-gradient(135deg,var(--accent),#ff7b7b); display:flex; align-items:center; justify-content:center; font-weight:700; color:#071427; font-size:28px; }
-    h1 { margin:0; font-size:26px; }
-    .muted { color:var(--muted); }
-    .btn { display:inline-block; margin-top:12px; padding:10px 14px; border-radius:10px; background:var(--accent); color:#071427; text-decoration:none; font-weight:600; }
-    .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:22px; }
-    .card { background:var(--card); padding:16px; border-radius:12px; margin-top:16px; }
-    .skills { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
-    .skill { padding:6px 10px; border-radius:999px; background:rgba(255,255,255,0.03); font-size:13px; }
-    .projects-btn { display:inline-block; margin-top:12px; padding:8px 12px; border-radius:8px; background:#ff7b7b; color:#fff; font-weight:600; text-decoration:none; font-size:14px; }
-    a.link { color:inherit; text-decoration:underline; }
-    @media(max-width:760px){.hero{flex-direction:column;align-items:flex-start}.grid{grid-template-columns:1fr}}
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince Mandhar | ML Developer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <!-- Hero Section -->
-    <div class="hero">
-      <div class="avatar">PM</div>
-      <div>
-        <h1>Prince Mandhar</h1>
-        <p class="muted"><strong>Data Science & ML Engineer</strong> — B.Tech CS, 2021-25 <br>Certified in Data Science & ML</p>
-        <a class="btn" href="Prince_ml__Profile.pdf" download>Download Resume (PDF)</a>
-        <div style="margin-top:10px" class="muted">
-          <div>Email: <a class="link" href="mailto:princemandhar@gmail.com">princemandhar@gmail.com</a></div>
-          <div>Phone: <a class="link" href="tel:+919368642443">+91 93686 42443</a></div>
-          <div>Location: Noida, Sector 66</div>
-          <div>LinkedIn: <a class="link" href="https://www.linkedin.com/in/princemandhar" target="_blank">linkedin.com/in/princemandhar</a></div>
-          <div>GitHub: <a class="link" href="https://github.com/PrinceMandhar" target="_blank">github.com/PrinceMandhar</a></div>
-          <div>Twitter: <a class="link" href="https://x.com/MandharMr?t=VJCN9LVLlTblFzYGw-3MRg&s=08" target="_blank">@MandharMr</a></div>
+    <!-- Header -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Machine Learning & AI Developer</p>
+                <h1>Hey, I'm <span>Prince Mandhar</span></h1>
+            </div>
         </div>
-      </div>
     </div>
 
-    <!-- Profile Summary -->
-    <div class="card">
-      <h3>Profile Summary</h3>
-      <p class="muted">I specialize in Data Science and Data Engineering — I have built end-to-end ML pipelines, worked on predictive models, data preprocessing, feature engineering, visualization dashboards, and automation of reports. My journey includes developing Machine Learning and Deep Learning models, designing ETL workflows, and working with tools like Power BI, Tableau, and SQL databases.</p>
-      <p class="muted">Along with Data Science, I also bring strong <strong>Business Analysis</strong> experience — using data-driven insights to improve processes and decision-making.</p>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="profile-image-container">
+                        <img src="dp.jpeg" class="profile-image">
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        "AI is not just a tool; it's the paintbrush that creates the future." — Prince Mandhar <br><br>
+                        I am a Machine Learning & Generative AI enthusiast with hands-on experience in Python, SQL, ML pipelines, and deep learning. 
+                        Currently, I am working on real-world AI & data science projects, and I aim to build intelligent solutions that have tangible business impact.
+                    </p>
+
+                    <!-- Tabs -->
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming:</span> Python, C++, LaTeX</li>
+                            <li><span>BI & Analytics:</span> Tableau, Power BI</li>
+                            <li><span>Database:</span> MS SQL, MySQL</li>
+                            <li><span>ML & AI:</span> Generative AI, LLM, RAG, Deep Learning, ANN</li>
+                            <li><span>Soft Skills:</span> Teamwork, Leadership, Analytical Thinking</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Ducat India:</span> Data Science Intern (Sept 2023 - Present)</li>
+                            <li><span>iNeuron.ai:</span> ML Intern (2023)</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.Tech CSE:</span> 9.0 CGPA</li>
+                            <li><span>Class 12th:</span> 97% PCM [CBSE]</li>
+                            <li><span>Class 10th:</span> 93% [CBSE]</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Top Skills -->
-    <div class="card">
-      <h3>Top Skills</h3>
-      <div class="skills">
-        <div class="skill">Python</div>
-        <div class="skill">Machine Learning (ML)</div>
-        <div class="skill">Deep Learning (DL)</div>
-        <div class="skill">ETL</div>
-        <div class="skill">Google Sheets</div>
-        <div class="skill">MySQL</div>
-        <div class="skill">SQL</div>
-        <div class="skill">Excel</div>
-        <div class="skill">Power BI</div>
-        <div class="skill">Tableau</div>
-        <div class="skill">Matplotlib</div>
-        <div class="skill">Seaborn</div>
-        <div class="skill">MS Word</div>
-      </div>
+    <!-- Projects Section -->
+    <div id="project">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="project-list">
+                <div class="project-item">
+                    <i class="fa-solid fa-robot"></i>
+                    <h2>Gen AI SQL Assistant</h2>
+                    <p>Web app to generate SQL queries from prompts for non-tech users. Technologies: LLM, OpenAI, Snowflake.</p>
+                </div>
+                <div class="project-item">
+                    <i class="fa-solid fa-file-alt"></i>
+                    <h2>Gen AI Document Search</h2>
+                    <p>Processes documents and answers questions contextually. Technologies: Python, LLM, OpenAI.</p>
+                </div>
+                <div class="project-item">
+                    <i class="fa-solid fa-cubes"></i>
+                    <h2>Personal Projects Collection</h2>
+                    <ul>
+                        <li>Sales Analysis</li>
+                        <li>Foodstuff & Booze Analysis</li>
+                        <li>IPL Matches Visualization</li>
+                        <li>Car Price Prediction</li>
+                        <li>Fake News Detection</li>
+                    </ul>
+                    <a href="https://github.com/princemandhar" target="_blank">Explore More</a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Experience (line-by-line) -->
-    <div class="card">
-      <h3>Experience</h3>
-      <p class="muted"><strong>Business Analyst — Bhargava Phytolab</strong> (Jul 2025 – Present) — Data extraction & automation from Dynamics 365, Power BI dashboards, zone & country-wise reports, process automation, improved forecast accuracy.</p>
-      <p class="muted"><strong>Data Science Intern — iNeuron.ai</strong> (Feb 2025 – Jun 2025) — Preprocessing, feature engineering, supervised ML models, end-to-end project pipelines. Completed projects: Loan Approval Prediction, Hospital Data Analysis, CNN Multi-Fruits Classification.</p>
-      <p class="muted"><strong>Data Science Trainee — Ducat India</strong> (Dec 2023 – Dec 2024) — Hands-on training on real-world projects. Built projects: Loan Approval Prediction, Sales Analysis, Customer Churn Prediction. Worked with Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Power BI & Tableau.</p>
-      <p class="muted"><strong>B.Tech — IIMT (AKTU)</strong> (2021–2025) — Computer Science & Technology — CGPA: 7.8. Branch topper, student's captain, JEE Mains cleared, Data Science certifications.</p>
+    <!-- Profile Section -->
+    <div id="profile">
+        <div class="container">
+            <h1 class="sub-title">Connect with Me</h1>
+            <div class="cube-container">
+                <div class="cube">
+                    <div class="face face1">
+                        <img src="GitHub-Mark.png" alt="GitHub">
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/princemandhar" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                    <div class="face face2">
+                        <img src="linkedin.webp" alt="LinkedIn">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/princemandhar/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                    <div class="face face3">
+                        <img src="X.png" alt="Twitter">
+                        <h3>Twitter</h3>
+                        <a href="https://twitter.com/er_prince_" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="Prince_ml__Profile.pdf" download class="btn">Download My Resume</a>
+        </div>
     </div>
 
-    <!-- Projects -->
-    <div class="card">
-      <h3>Projects (selected)</h3>
-      <ul class="muted">
-        <li><a class="link" href="https://github.com/PrinceMandhar/Machine-learning" target="_blank">Machine Learning Projects</a> — Classification, regression, deep learning, data analysis with real-world datasets.</li>
-        <li><a class="link" href="https://github.com/PrinceMandhar/Deep-learning" target="_blank">Deep Learning Projects</a> — CNNs, TensorFlow/Keras, augmentation, hands-on deep learning tasks.</li>
-        <li><a class="link" href="https://github.com/PrinceMandhar/Data-Analysis-" target="_blank">Data Analysis Projects</a> — Python, NumPy, Pandas, Matplotlib, data cleaning, visualization, statistics.</li>
-        <li><a class="link" href="https://github.com/PrinceMandhar/Automated-MCQ-Generator-Using-Langchain-OpenAI-API-main" target="_blank">Automated MCQ Generator</a> — Using Langchain & OpenAI API.</li>
-        <li><a class="link" href="https://github.com/PrinceMandhar/DataAnalyzerApp_College" target="_blank">Data Analyzer App — College Project</a></li>
-      </ul>
-      <a class="projects-btn" href="https://github.com/PrinceMandhar" target="_blank">Other Projects on GitHub</a>
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> princemandhar@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 8888888888</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/er_prince_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/er_prince_" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <a href="Prince_ml__Profile.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet" action="https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec" method="POST">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p><i class="fa-solid fa-heart-pulse"></i> Made by Prince Mandhar</p>
+        </div>
     </div>
 
-    <!-- Contact -->
-    <div class="card">
-      <h3>Contact / Hire</h3>
-      <p class="muted">📩 If you’re looking to hire, please reach out to me directly — I am <strong>open to opportunities in Machine Learning, AI, Data Science, and Data Engineering</strong>.</p>
-    </div>
-  </div>
+    <script src="https://kit.fontawesome.com/ba53288749.js" crossorigin="anonymous"></script>
+    <script>
+        // Tabs
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks){ tablink.classList.remove("active-link"); }
+            for (tabcontent of tabcontents){ tabcontent.classList.remove("active-tab"); }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
 
-  <!-- Footer -->
-  <footer style="margin-top:50px; padding:50px 0; text-align:center; background:linear-gradient(180deg,#071027 0%, #07142a 100%);">
-    <p style="color:var(--muted); font-size:13px; margin-bottom:15px;">© 2025 Prince Mandhar</p>
-    <div style="margin-bottom:50px;">
-      <a href="mailto:princemandhar@gmail.com" target="_blank" style="color:#ffb86b; text-decoration:none; margin:0 10px; transition:0.3s;">📧 Email</a> |
-      <a href="https://github.com/PrinceMandhar" target="_blank" style="color:#ffb86b; text-decoration:none; margin:0 10px; transition:0.3s;">🐙 GitHub</a> |
-      <a href="https://www.linkedin.com/in/princemandhar/" target="_blank" style="color:#ffb86b; text-decoration:none; margin:0 10px; transition:0.3s;">💼 LinkedIn</a> |
-      <a href="https://x.com/MandharMr?t=VJCN9LVLlTblFzYGw-3MRg&s=08" target="_blank" style="color:#ffb86b; text-decoration:none; margin:0 10px; transition:0.3s;">🐦 Twitter</a>
-    </div>
-  </footer>
+        // Side menu
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){ sidemenu.style.right = "0"; }
+        function closemenu(){ sidemenu.style.right = "-200px"; }
 
-  <style>
-    footer a:hover { color:#ff7b7b; text-decoration:underline; }
-  </style>
+        // Google Sheet form
+        const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(()=>{ msg.innerHTML = "" },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
 </html>
