@@ -1,180 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prince Mandhar Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince Mandhar - Data Science Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 
-<!-- Header Section -->
-<header id="header">
-  <div class="overlay"></div>
-  <nav>
-    <div class="logo">
-      <img src="logo.png" alt="Prince Mandhar Logo" class="logo-img">
-    </div>
-    <ul id="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <i class="fa-solid fa-ellipsis-vertical" id="menu-toggle"></i>
-    <i class="fa-solid fa-xmark" id="menu-close"></i>
-  </nav>
-  <div class="header-text">
-    <h1>Prince <span>Mandhar</span></h1>
-    <p>Data Science | Data Engineer | AI/ML | Contact for Hire</p>
-    <a href="princemandhar_resume.pdf" class="btn" target="_blank">Download Resume</a>
+<!-- Navbar -->
+<nav>
+  <div class="logo">
+    <img src="Logo.png" alt="Prince Mandhar Logo" class="logo-img">
   </div>
-</header>
+  <ul id="nav-links">
+    <li class="menu-header">
+      <img src="Logo.png" alt="Prince Mandhar Logo" class="menu-logo">
+      <span class="menu-name">Prince Mandhar</span>
+    </li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <i class="fa-solid fa-ellipsis-vertical" id="menu-toggle"></i>
+  <i class="fa-solid fa-xmark" id="menu-close"></i>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <img src="desktop.jpg" alt="Desktop Background" class="desktop-bg">
+    <img src="phone.jpg" alt="Phone Background" class="phone-bg">
+    <div class="hero-content">
+        <h1>Prince Mandhar</h1>
+        <p>Data Science | Data Engineering | AI/ML</p>
+        <a href="#contact" class="hire-btn">Contact for Hire</a>
+    </div>
+</section>
 
 <!-- About Section -->
 <section id="about">
-  <div class="container about-container">
-    <div class="about-col-1">
-      <div class="profile-image-container-square">
-        <img src="db.jpg" alt="Prince Mandhar">
-      </div>
+    <div class="profile-img">
+        <img src="my iamge.jpg" alt="Prince Mandhar" class="profile-pic">
     </div>
-    <div class="about-col-2">
-      <h2 class="sub-title">Profile Summary</h2>
-      <p>
-        Business Analyst & Data Science professional with expertise in Microsoft Dynamics 365 Business Central, Python, SQL, Power BI, and Tableau. Skilled in Machine Learning, Data Engineering, and data visualization to deliver actionable insights. Experienced in building automated data pipelines, KPI dashboards, and predictive models to optimize decision-making and drive business growth.
-      </p>
-      <h3>Skills</h3>
-      <ul class="skills-list">
-        <li>Python</li>
-        <li>SQL</li>
-        <li>Power BI</li>
-        <li>Tableau</li>
-        <li>MS Excel</li>
-        <li>Google Sheets</li>
-        <li>MySQL</li>
-        <li>Pandas, NumPy</li>
-        <li>Matplotlib, Seaborn</li>
-        <li>Machine Learning</li>
-        <li>Deep Learning</li>
-      </ul>
+    <div class="profile-summary">
+        <h2>Profile Summary</h2>
+        <p>
+            I specialize in Data Science and Data Engineering — built end-to-end ML pipelines, worked on predictive models, 
+            data preprocessing, feature engineering, visualization dashboards, and automation of reports.
+        </p>
+        <p>
+            Along with Data Science, I also bring strong <strong>Business Analysis</strong> experience.
+        </p>
     </div>
-  </div>
 </section>
 
 <!-- Projects Section -->
 <section id="projects">
-  <div class="container">
-    <h2 class="sub-title">Projects</h2>
     <div class="project-list">
-      <div class="project-item">
-        <h2>Machine Learning Projects</h2>
-        <p>Hands-on ML projects using Python.</p>
-        <a href="https://github.com/PrinceMandhar/Machine-learning" target="_blank">View Project</a>
-      </div>
-      <div class="project-item">
-        <h2>Deep Learning</h2>
-        <p>Experiments with ANN, CNN, and RNN models.</p>
-        <a href="https://github.com/PrinceMandhar/Deep-learning" target="_blank">View Project</a>
-      </div>
-      <div class="project-item">
-        <h2>Data Analysis</h2>
-        <p>Python-based analysis with Pandas, Numpy, Matplotlib.</p>
-        <a href="https://github.com/PrinceMandhar/Data-Analysis-" target="_blank">View Project</a>
-      </div>
-      <div class="project-item">
-        <h2>Automated MCQ Generator</h2>
-        <p>LangChain + OpenAI API-based Question Generator.</p>
-        <a href="https://github.com/PrinceMandhar/Automated-MCQ-Generator-Using-Langchain-OpenAI-API-main" target="_blank">View Project</a>
-      </div>
-      <div class="project-item">
-        <h2>Data Analyzer App</h2>
-        <p>GUI-based Data Analyzer built with Python Tkinter + Plotly.</p>
-        <a href="https://github.com/PrinceMandhar/DataAnalyzerApp_College" target="_blank">View Project</a>
-      </div>
+        <div>
+            <h2>Machine Learning Projects</h2>
+            <p>Hands-on ML projects using Python.</p>
+            <a href="https://github.com/PrinceMandhar/Machine-learning">View Project</a>
+        </div>
+        <div>
+            <h2>Deep Learning</h2>
+            <p>Experiments with ANN, CNN, and RNN models.</p>
+            <a href="https://github.com/PrinceMandhar/Deep-learning">View Project</a>
+        </div>
+        <div>
+            <h2>Data Analysis</h2>
+            <p>Python-based analysis with Pandas, Numpy, Matplotlib.</p>
+            <a href="https://github.com/PrinceMandhar/Data-Analysis-">View Project</a>
+        </div>
+        <div>
+            <h2>Automated MCQ Generator</h2>
+            <p>LangChain + OpenAI API-based Question Generator.</p>
+            <a href="https://github.com/PrinceMandhar/Automated-MCQ-Generator-Using-Langchain-OpenAI-API-main">View Project</a>
+        </div>
+        <div>
+            <h2>Data Analyzer App</h2>
+            <p>GUI-based Data Analyzer built with Python Tkinter + Plotly.</p>
+            <a href="https://github.com/PrinceMandhar/DataAnalyzerApp_College">View Project</a>
+        </div>
     </div>
-  </div>
 </section>
 
-<!-- 3D Cube Section -->
-<section id="cube">
-  <div class="cube-container">
+<!-- 3D Cube Social Section -->
+<section class="social-cube">
     <div class="cube">
-      <div class="face front"><a href="https://instagram.com/PrinceMandhar" target="_blank"><img src="instagram.png" alt="Instagram"></a></div>
-      <div class="face back"><a href="https://linkedin.com/PrinceMandhar" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a></div>
-      <div class="face right"><a href="https://github.com/PrinceMandhar" target="_blank"><img src="github.png" alt="GitHub"></a></div>
-      <div class="face left"><a href="https://x.com/MandharMr" target="_blank"><img src="x.png" alt="X/Twitter"></a></div>
-      <div class="face top"></div>
-      <div class="face bottom"></div>
+        <div class="face front"><a href="#"><img src="Instagram.webp" alt="Instagram"></a></div>
+        <div class="face back"><a href="#"><img src="linkedin.webp" alt="LinkedIn"></a></div>
+        <div class="face right"><a href="#"><img src="X.png" alt="X/Twitter"></a></div>
+        <div class="face left"><a href="#"><img src="GitHub-Mark.png" alt="GitHub"></a></div>
+        <div class="face top"><a href="#"><img src="Logo.png" alt="Logo"></a></div>
+        <div class="face bottom"><a href="#"><img src="Logo.png" alt="Logo"></a></div>
     </div>
-  </div>
 </section>
 
-<!-- Experience Section -->
-<section id="experience">
-  <div class="container">
-    <h2 class="sub-title">Experience</h2>
-    <ul>
-      <li><strong>Business Analyst — Bhargava Phytolab</strong><br>
-      Automated reporting from Dynamics 365, built KPI dashboards in Power BI, improved forecasting accuracy by 20%.
-      </li>
-      <li><strong>Data Science Intern — iNeuron.ai</strong><br>
-      Developed ML models, feature pipelines, and end-to-end data solutions for real-world datasets.
-      </li>
-      <li><strong>Data Science Trainee — Ducat India</strong><br>
-      Completed projects on churn prediction, loan approval, and CNN-based image classification.
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- Contact Form Section -->
+<!-- Contact Section -->
 <section id="contact">
-  <div class="container contact-container">
-    <h2 class="sub-title">Contact Me</h2>
-    <form action="mailto:princemandhar@gmail.com" method="post" enctype="text/plain" class="contact-form">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Mail</button>
+    <h2>Contact Me</h2>
+    <form action="mailto:princemandhar@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Mail</button>
     </form>
-  </div>
 </section>
-
-<!-- Floating Social Slide -->
-<div class="social-slide" id="social-slide">
-  <a href="https://instagram.com/PrinceMandhar" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-  <a href="https://linkedin.com/PrinceMandhar" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
-  <a href="https://github.com/PrinceMandhar" target="_blank"><img src="github.png" alt="GitHub"></a>
-  <a href="https://x.com/MandharMr" target="_blank"><img src="x.png" alt="X/Twitter"></a>
-</div>
-
-<!-- Footer -->
-<footer>
-  <p>@ Prince Mandhar - Site made by Prince</p>
-</footer>
 
 <script>
-const menuToggle = document.getElementById('menu-toggle');
-const menuClose = document.getElementById('menu-close');
-const navLinks = document.getElementById('nav-links');
-const socialSlide = document.getElementById('social-slide');
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const navLinks = document.getElementById('nav-links');
 
-menuToggle.addEventListener('click', () => {
-  socialSlide.classList.add('active');
-});
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+    menuClose.addEventListener('click', () => navLinks.classList.remove('active'));
 
-menuClose.addEventListener('click', () => {
-  socialSlide.classList.remove('active');
-});
-
-window.addEventListener('click', (e) => {
-  if (!e.target.closest('#menu-toggle') && !e.target.closest('.social-slide')) {
-    socialSlide.classList.remove('active');
-  }
-});
+    // Close menu if clicking outside
+    document.addEventListener('click', (e) => {
+        if(!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('active');
+        }
+    });
 </script>
-
 </body>
 </html>
