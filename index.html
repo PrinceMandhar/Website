@@ -7,14 +7,12 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
 
 <!-- Header Section -->
 <header id="header">
-  <div class="overlay"></div>
   <nav>
     <div class="logo">
       <h1>Prince <span>Mandhar</span></h1>
@@ -29,6 +27,7 @@
     <i class="fa-solid fa-ellipsis-vertical" id="menu-toggle"></i>
     <i class="fa-solid fa-xmark" id="menu-close"></i>
   </nav>
+
   <div class="header-text">
     <h1>Prince <span>Mandhar</span></h1>
     <p>Data Science | Data Engineer | AI/ML | Contact for Hire</p>
@@ -99,45 +98,6 @@
   </div>
 </section>
 
-<!-- Social Media Slider -->
-<section id="slider-cards">
-  <h2 class="sub-title">Connect & Explore My Work</h2>
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-
-      <div class="swiper-slide card">
-        <i class="fab fa-instagram fa-4x"></i>
-        <h3>Instagram</h3>
-        <p>Follow me for behind-the-scenes of my projects and AI experiments.</p>
-        <a href="https://www.instagram.com/prince_mandhar/" target="_blank" class="btn">Visit</a>
-      </div>
-
-      <div class="swiper-slide card">
-        <i class="fab fa-linkedin fa-4x"></i>
-        <h3>LinkedIn</h3>
-        <p>Connect with me professionally, explore my projects & achievements.</p>
-        <a href="https://www.linkedin.com/in/prince/" target="_blank" class="btn">Visit</a>
-      </div>
-
-      <div class="swiper-slide card">
-        <i class="fab fa-x-twitter fa-4x"></i>
-        <h3>X (Twitter)</h3>
-        <p>Follow my updates, insights on AI, Data Science, and tech trends.</p>
-        <a href="https://twitter.com/prince_mandhar" target="_blank" class="btn">Visit</a>
-      </div>
-
-      <div class="swiper-slide card">
-        <i class="fab fa-github fa-4x"></i>
-        <h3>GitHub</h3>
-        <p>Explore my repositories, ML projects, and coding experiments.</p>
-        <a href="https://github.com/PrinceMandhar" target="_blank" class="btn">Visit</a>
-      </div>
-
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
-
 <!-- Experience Section -->
 <section id="experience">
   <div class="container">
@@ -163,6 +123,47 @@
   </div>
 </section>
 
+<!-- Social Media Cards Under Contact -->
+<section id="social-slider" style="background-color: #000; padding: 50px 0;">
+  <div class="container">
+    <h2 class="sub-title" style="text-align: center; margin-bottom: 30px;">Connect With Me</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide card">
+          <i class="fab fa-instagram fa-4x"></i>
+          <h3>Instagram</h3>
+          <p>Follow me for behind-the-scenes of my projects and AI experiments.</p>
+          <a href="https://www.instagram.com/prince_mandhar/" target="_blank" class="btn">Visit</a>
+        </div>
+
+        <div class="swiper-slide card">
+          <i class="fab fa-linkedin fa-4x"></i>
+          <h3>LinkedIn</h3>
+          <p>Connect with me professionally, explore my projects & achievements.</p>
+          <a href="https://www.linkedin.com/in/prince/" target="_blank" class="btn">Visit</a>
+        </div>
+
+        <div class="swiper-slide card">
+          <i class="fab fa-x-twitter fa-4x"></i>
+          <h3>X (Twitter)</h3>
+          <p>Follow my updates, insights on AI, Data Science, and tech trends.</p>
+          <a href="https://twitter.com/prince_mandhar" target="_blank" class="btn">Visit</a>
+        </div>
+
+        <div class="swiper-slide card">
+          <i class="fab fa-github fa-4x"></i>
+          <h3>GitHub</h3>
+          <p>Explore my repositories, ML projects, and coding experiments.</p>
+          <a href="https://github.com/PrinceMandhar" target="_blank" class="btn">Visit</a>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
 <!-- Footer -->
 <footer>
   <p>Made by <span class="blue">Prince Mandhar</span></p>
@@ -182,17 +183,12 @@
     pagination: { el: ".swiper-pagination", clickable: true }
   });
 
-  // Toggle menu
   const menuToggle = document.getElementById('menu-toggle');
   const menuClose = document.getElementById('menu-close');
   const navLinks = document.getElementById('nav-links');
 
-  menuToggle.addEventListener('click', () => {
-    navLinks.style.display = 'block';
-  });
-  menuClose.addEventListener('click', () => {
-    navLinks.style.display = 'none';
-  });
+  menuToggle.addEventListener('click', () => { navLinks.style.display = 'block'; });
+  menuClose.addEventListener('click', () => { navLinks.style.display = 'none'; });
 </script>
 
 </body>
