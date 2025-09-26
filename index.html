@@ -1,358 +1,371 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prince Mandhar Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-    body{line-height:1.6;color:#fff;background:#000;}
-    a{text-decoration:none;color:#ff4b5c;}
-    ul{list-style:none;}
-
-    /* Header */
-    #header{
-      height:100vh;width:100%;
-      background:url('desktop.jpg') no-repeat center center/cover;
-      position:relative;display:flex;flex-direction:column;
-      justify-content:center;align-items:center;color:#fff;text-align:center;
-    }
-    #header .overlay{
-      position:absolute;top:0;left:0;width:100%;height:100%;
-      background:rgba(0,0,0,0.6);z-index:0;
-    }
-    .header-text{position:relative;z-index:1;}
-    .header-text h1 span{color:#ff4b5c;}
-    .btn{display:inline-block;background:#ff4b5c;color:#fff;padding:12px 30px;border-radius:30px;margin-top:20px;font-weight:600;transition:0.3s;}
-    .btn:hover{background:#0f172a;}
-
-    /* Nav */
-    nav{position:absolute;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 50px;z-index:2;}
-    nav ul{display:flex;gap:20px;}
-    nav ul li a{color:#fff;font-weight:500;}
-    nav i.fa-ellipsis-vertical, nav i.fa-xmark{display:none;color:#fff;font-size:28px;cursor:pointer;}
-    .logo-img{width:80px;border-radius:50%;border:3px solid #ff4b5c;animation:rotate 5s linear infinite;}
-    @keyframes rotate{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
-
-    
-
-
-    /* About */
-    #about{padding:80px 20px;background:#000;}
-    .about-container{display:flex;flex-wrap:wrap;gap:30px;max-width:1200px;margin:auto;}
-    .about-col-1,.about-col-2{flex:1;}
-    .profile-image-container-square{width:250px;height:250px;overflow:hidden;border-radius:20px;border:5px solid #ff4b5c;margin:auto;}
-    .profile-image-container-square img{width:100%;height:100%;object-fit:cover;}
-    .sub-title{font-size:32px;color:#ff4b5c;margin-bottom:20px;}
-    .skills-list{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:15px;}
-    .skills-list li{background:#ff4b5c;color:#fff;padding:8px 15px;border-radius:20px;}
-
-    /* Projects */
-    #projects{padding:80px 20px;background:#111;}
-    .project-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;}
-    .project-item{background:#1a1a1a;padding:30px;border-radius:15px;box-shadow:0 0 15px rgba(0,0,0,0.6);text-align:center;}
-    .project-item h2{color:#ff4b5c;margin-bottom:10px;}
-
-    /* Tabs Section (instead of 3D Cube) */
-    #tabs{padding:80px 20px;background:#000;color:#fff;}
-    .tabs-container{max-width:1000px;margin:auto;}
-    .tab-buttons{display:flex;justify-content:center;gap:20px;margin-bottom:20px;flex-wrap:wrap;}
-    .tab-buttons button{padding:10px 20px;border:none;border-radius:20px;background:#ff4b5c;color:#fff;cursor:pointer;font-weight:600;}
-    .tab-buttons button.active{background:#0f172a;}
-    .tab-content{display:none;text-align:center;background:#1a1a1a;padding:30px;border-radius:10px;}
-    .tab-content.active{display:block;}
-
-    /* Experience */
-    #experience{padding:80px 20px;background:#111;}
-    #experience ul li{margin-bottom:20px;}
-
-    /* Contact Form */
-    .contact-container{max-width:600px;margin:auto;text-align:center;}
-    .contact-form{display:flex;flex-direction:column;gap:15px;}
-    .contact-form input,.contact-form textarea{padding:10px;border-radius:8px;border:1px solid #555;font-size:16px;background:#1a1a1a;color:#fff;}
-    .contact-form button{width:150px;margin:auto;}
-
-    /* Social links below Contact */
-    .contact-social{margin-top:30px;display:flex;justify-content:center;gap:20px;}
-    .contact-social a img{width:40px;height:40px;}
-
-    /* Footer */
-    footer{background:#0f172a;color:#fff;text-align:center;padding:20px;}
-
-    /* Responsive */
-    @media(max-width:1024px){
-      nav ul{position:fixed;right:-200px;top:0;width:200px;height:100%;flex-direction:column;background:#0f172a;padding-top:60px;transition:0.3s;}
-      nav i.fa-ellipsis-vertical,nav i.fa-xmark{display:block;}
-      .about-container{flex-direction:column;text-align:center;}
-    }
-    @media(max-width:768px){
-      #header{background:url('phone.jpg') no-repeat center center/cover;}
-      .sub-title{font-size:28px;}
-      .header-text h1{font-size:32px;}
-      .profile-image-container-square{width:180px;height:180px;}
-    }
-  </style>
-</head>
-<body>
-
-<!-- Header Section -->
-<header id="header">
-  <div class="overlay"></div>
-  <nav>
-    <div class="logo"><img src="logo.png" alt="Prince Mandhar Logo" class="logo-img"></div>
-    <ul id="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#tabs">More</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <i class="fa-solid fa-ellipsis-vertical" id="menu-toggle"></i>
-    <i class="fa-solid fa-xmark" id="menu-close"></i>
-  </nav>
-  <div class="header-text">
-    <h1>Prince <span>Mandhar</span></h1>
-    <p>Data Science | Data Engineer | AI/ML | Contact for Hire</p>
-    <a href="Prince_ml__Profile.pdf" class="btn" target="_blank">Download Resume</a>
-  </div>
-</header>
-
-<!-- About Section -->
-<section id="about">
-  <div class="container about-container">
-    <div class="about-col-1">
-      <div class="profile-image-container-square"><img src="my.jpg" alt="Prince Mandhar"></div>
-    </div>
-    <div class="about-col-2">
-      <h2 class="sub-title">Profile Summary</h2>
-      <p>Business Analyst & Data Science professional with expertise in Microsoft Dynamics 365 Business Central, Python, SQL, Power BI, and Tableau. Skilled in Machine Learning, Data Engineering, and data visualization to deliver actionable insights.</p>
-      <h3>Skills</h3>
-      <ul class="skills-list">
-        <li>Python</li><li>SQL</li><li>Power BI</li><li>Tableau</li><li>MS Excel</li>
-        <li>Google Sheets</li><li>MySQL</li><li>Pandas, NumPy</li><li>Matplotlib, Seaborn</li>
-        <li>Machine Learning</li><li>Deep Learning</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" style="padding: 50px 0; background-color: #111; color: #fff;">
-  <div class="container" style="max-width: 1000px; margin: auto;">
-    <h2 class="sub-title" style="text-align:center; margin-bottom: 40px;">Projects</h2>
-    <div class="project-list" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-      
-      <div class="project-item" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; width: 300px; text-align: center;">
-        <h3>Machine Learning Projects</h3>
-        <p>Hands-on ML projects using Python.</p>
-        <a href="https://github.com/PrinceMandhar/Machine-learning" target="_blank" style="display:inline-block; margin-top: 10px; padding: 8px 15px; background-color: #0d6efd; color: #fff; text-decoration: none; border-radius: 5px;">View on GitHub</a>
-      </div>
-      
-      <div class="project-item" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; width: 300px; text-align: center;">
-        <h3>Deep Learning</h3>
-        <p>Experiments with ANN, CNN, and RNN models.</p>
-        <a href="https://github.com/PrinceMandhar/NLP-openCV" target="_blank" style="display:inline-block; margin-top: 10px; padding: 8px 15px; background-color: #0d6efd; color: #fff; text-decoration: none; border-radius: 5px;">View on GitHub</a>
-      </div>
-      
-      <div class="project-item" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; width: 300px; text-align: center;">
-        <h3>Data Analysis</h3>
-        <p>Python-based analysis with Pandas, NumPy, Matplotlib.</p>
-        <a href="https://github.com/PrinceMandhar/Data-Analysis" target="_blank" style="display:inline-block; margin-top: 10px; padding: 8px 15px; background-color: #0d6efd; color: #fff; text-decoration: none; border-radius: 5px;">View on GitHub</a>
-      </div>
-      
-      <div class="project-item" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; width: 300px; text-align: center;">
-        <h3>Automated MCQ Generator</h3>
-        <p>LangChain + OpenAI API-based Question Generator.</p>
-        <a href="https://github.com/PrinceMandhar/Automated-MCQ-Generator-Using-Langchain-OpenAI-API-main" target="_blank" style="display:inline-block; margin-top: 10px; padding: 8px 15px; background-color: #0d6efd; color: #fff; text-decoration: none; border-radius: 5px;">View on GitHub</a>
-      </div>
-      
-      <div class="project-item" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; width: 300px; text-align: center;">
-        <h3>Data Analyzer App</h3>
-        <p>GUI-based Data Analyzer built with Python Tkinter + Plotly.</p>
-        <a href="https://github.com/PrinceMandhar/DataAnalyzerApp_College" target="_blank" style="display:inline-block; margin-top: 10px; padding: 8px 15px; background-color: #0d6efd; color: #fff; text-decoration: none; border-radius: 5px;">View on GitHub</a>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-
-<!-- Social Media Carousel Section -->
-<section id="tabs">
-  <div class="tabs-container">
-    <div class="carousel-container">
-      <div class="carousel-wrapper" id="carousel">
-        <a href="https://instagram.com/er_prince" target="_blank" class="carousel-card">
-          <img src="instagram.webp" alt="Instagram" style="width:60px;">
-          <h3>Instagram</h3>
-          <p>Follow my creative journey & projects.</p>
-        </a>
-        <a href="https://www.linkedin.com/in/princemandhar/" target="_blank" class="carousel-card">
-          <img src="linkedin.webp" alt="LinkedIn" style="width:60px;">
-          <h3>LinkedIn</h3>
-          <p>Connect professionally & see my work history.</p>
-        </a>
-        <a href="https://github.com/PrinceMandhar" target="_blank" class="carousel-card">
-          <img src="GitHub.png" alt="GitHub" style="width:60px;">
-          <h3>GitHub</h3>
-          <p>Check out my coding projects & repositories.</p>
-        </a>
-        <a href="https://x.com/MandharMr" target="_blank" class="carousel-card">
-          <img src="x.png" alt="X/Twitter" style="width:60px;">
-          <h3>X / Twitter</h3>
-          <p>Follow for updates on AI & Data Science.</p>
-        </a>
-      </div>
-      <!-- Navigation Arrows -->
-      <div class="carousel-nav">
-        <button id="prev">&#10094;</button>
-        <button id="next">&#10095;</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<style>
-/* Carousel Styles */
-.carousel-container{
-  position:relative;
-  max-width:600px;
-  margin:50px auto;
-  overflow:hidden;
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-.carousel-wrapper{
-  display:flex;
-  transition:transform 0.5s ease-in-out;
+body {
+  line-height: 1.6;
+  color: #fff;
+  background: #000;
 }
-.carousel-card{
-  min-width:100%;
-  background:#1a1a1a;
-  margin:0 10px;
-  padding:30px;
-  border-radius:15px;
-  text-align:center;
-  box-shadow:0 0 15px rgba(255,75,92,0.5);
+a {
+  text-decoration: none;
+  color: #ff4b5c;
 }
-.carousel-card h3{color:#ff4b5c;margin:10px 0;}
-.carousel-card p{color:#fff;font-size:14px;}
-
-/* Carousel arrows */
-.carousel-nav{
-  position:absolute;
-  top:50%;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  transform:translateY(-50%);
-}
-.carousel-nav button{
-  background:rgba(0,0,0,0.6);
-  border:none;
-  color:#fff;
-  font-size:30px;
-  padding:5px 10px;
-  cursor:pointer;
-  border-radius:50%;
-  transition:0.3s;
-}
-.carousel-nav button:hover{background:#ff4b5c;}
-</style>
-
-<script>
-// Carousel Logic
-const carousel = document.getElementById('carousel');
-const cards = document.querySelectorAll('.carousel-card');
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
-let index = 0;
-
-function showSlide(i){
-  if(i<0) index=cards.length-1;
-  else if(i>=cards.length) index=0;
-  else index=i;
-  carousel.style.transform = `translateX(-${index*100}%)`;
+ul {
+  list-style: none;
 }
 
-// Auto-slide every 4s
-let autoSlide = setInterval(()=>{showSlide(index+1)},4000);
-
-// Arrow controls
-nextBtn.addEventListener('click', ()=>{
-  showSlide(index+1);
-  resetInterval();
-});
-prevBtn.addEventListener('click', ()=>{
-  showSlide(index-1);
-  resetInterval();
-});
-
-function resetInterval(){
-  clearInterval(autoSlide);
-  autoSlide = setInterval(()=>{showSlide(index+1)},4000);
+/* Header */
+#header {
+  height: 100vh;
+  width: 100%;
+  background: url('desktop.jpg') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
 }
-</script>
+#header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 0;
+}
+.header-text {
+  position: relative;
+  z-index: 1;
+}
+.header-text h1 span {
+  color: #ff4b5c;
+}
+.btn {
+  display: inline-block;
+  background: #ff4b5c;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  margin-top: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #0f172a;
+}
 
+/* Navigation */
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  z-index: 2;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+nav ul li a {
+  color: #fff;
+  font-weight: 500;
+}
+nav i.fa-ellipsis-vertical,
+nav i.fa-xmark {
+  display: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+.logo-img {
+  width: 80px;
+  border-radius: 50%;
+  border: 3px solid #ff4b5c;
+  animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
 
-<!-- Experience Section -->
-<section id="experience">
-  <div class="container">
-    <h2 class="sub-title">Experience</h2>
-    <ul>
-      <li><strong>Business Analyst — Bhargava Phytolab</strong><br>Automated reporting from Dynamics 365, built KPI dashboards in Power BI.</li>
-      <li><strong>Data Science Intern — iNeuron.ai</strong><br>Developed ML models, feature pipelines, and end-to-end data solutions.</li>
-      <li><strong>Data Science Trainee — Ducat India</strong><br>Completed projects on churn prediction, loan approval, and CNN-based image classification.</li>
-    </ul>
-  </div>
-</section>
+/* About Section */
+#about {
+  padding: 80px 20px;
+  background: #000;
+}
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+.about-col-1,
+.about-col-2 {
+  flex: 1;
+}
+.profile-image-container-square {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 5px solid #ff4b5c;
+  margin: auto;
+}
+.profile-image-container-square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sub-title {
+  font-size: 32px;
+  color: #ff4b5c;
+  margin-bottom: 20px;
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.skills-list li {
+  background: #ff4b5c;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
 
-<!-- Contact Section -->
-<section id="contact">
-  <div class="container contact-container">
-    <h2 class="sub-title">Contact Me</h2>
-    <form action="mailto:princemandhar@gmail.com" method="post" enctype="text/plain" class="contact-form">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Mail</button>
-    </form>
-    <!-- Extra Social Links under Contact -->
-    <div class="contact-social">
-      <a href="https://instagram.com/er_prince_" target="_blank"><img src="instagram.webp" alt="Instagram"></a>
-      <a href="https://www.linkedin.com/in/princemandhar/" target="_blank"><img src="linkedin.webp" alt="LinkedIn"></a>
-      <a href="https://github.com/PrinceMandhar" target="_blank"><img src="GitHub.png" alt="GitHub"></a>
-      <a href="https://x.com/MandharMr" target="_blank"><img src="x.png" alt="X/Twitter"></a>
-    </div>
-  </div>
-</section>
+/* Projects Section */
+#projects {
+  padding: 80px 20px;
+  background: #111;
+}
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.project-item {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  text-align: center;
+}
+.project-item h2 {
+  color: #ff4b5c;
+  margin-bottom: 10px;
+}
 
-<!-- Footer Section -->
-<footer style="background-color: #111; color: #fff; text-align: center; padding: 30px 20px; margin-top: 50px;">
-  <p>© 2025 Prince Mandhar | Made by Prince Mandhar</p>
-  <p>Email: <a href="mailto:princemandhar@gmail.com" style="color: #0d6efd; text-decoration: none;">princemandhar@gmail.com</a> | Phone: <a href="tel:+919368642443" style="color: #0d6efd; text-decoration: none;">+91 9368642443</a></p>
-</footer>
+/* Tabs / Carousel Section */
+#tabs {
+  padding: 80px 20px;
+  background: #000;
+  color: #fff;
+}
+.tabs-container {
+  max-width: 1000px;
+  margin: auto;
+}
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.tab-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4b5c;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+.tab-buttons button.active {
+  background: #0f172a;
+}
+.tab-content {
+  display: none;
+  text-align: center;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+}
+.tab-content.active {
+  display: block;
+}
 
+/* Experience Section */
+#experience {
+  padding: 80px 20px;
+  background: #111;
+}
+#experience ul li {
+  margin-bottom: 20px;
+}
 
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const menuClose = document.getElementById('menu-close');
-  const navLinks = document.getElementById('nav-links');
+/* Contact Form */
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  font-size: 16px;
+  background: #1a1a1a;
+  color: #fff;
+}
+.contact-form button {
+  width: 150px;
+  margin: auto;
+}
 
-  menuToggle.addEventListener('click',()=>{navLinks.style.right="0";});
-  menuClose.addEventListener('click',()=>{navLinks.style.right="-200px";});
+/* Social Links Below Contact */
+.contact-social {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.contact-social a img {
+  width: 40px;
+  height: 40px;
+}
 
-  // Tabs
-  const tabButtons=document.querySelectorAll(".tab-buttons button");
-  const tabContents=document.querySelectorAll(".tab-content");
-  tabButtons.forEach(btn=>{
-    btn.addEventListener("click",()=>{
-      tabButtons.forEach(b=>b.classList.remove("active"));
-      tabContents.forEach(c=>c.classList.remove("active"));
-      btn.classList.add("active");
-      document.getElementById(btn.dataset.tab).classList.add("active");
-    });
-  });
-</script>
-</body>
-</html>
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 50px;
+}
+
+/* Carousel */
+.carousel-container {
+  position: relative;
+  max-width: 600px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-card {
+  min-width: 100%;
+  background: #1a1a1a;
+  margin: 0 10px;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255,75,92,0.5);
+}
+.carousel-card h3 {
+  color: #ff4b5c;
+  margin: 10px 0;
+}
+.carousel-card p {
+  color: #fff;
+  font-size: 14px;
+}
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+.carousel-nav button {
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.carousel-nav button:hover {
+  background: #ff4b5c;
+}
+
+/* Responsive Styles */
+@media(max-width: 1024px) {
+  nav ul {
+    position: fixed;
+    right: -200px; /* hidden initially */
+    top: 0;
+    width: 200px;
+    height: 100%;
+    flex-direction: column;
+    background: #0f172a;
+    padding-top: 60px;
+    transition: 0.3s;
+  }
+  nav i.fa-ellipsis-vertical,
+  nav i.fa-xmark {
+    display: block;
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media(max-width: 768px) {
+  #header {
+    background: url('phone.jpg') no-repeat center center/cover;
+  }
+  .sub-title {
+    font-size: 28px;
+  }
+  .header-text h1 {
+    font-size: 32px;
+  }
+  .profile-image-container-square {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* Mobile 3-dot menu fix: aligned right */
+#menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000;
+}
+#menu-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000;
+}
