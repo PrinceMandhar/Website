@@ -4,155 +4,191 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prince Mandhar Portfolio</title>
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background: #000; /* Black Background */
-      color: #fff;
-    }
-
-    h2.sub-title {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00d4ff;
-    }
-
-    /* Social Slider Section */
-    #social-slider {
-      padding: 60px 20px;
-      background: #000;
-    }
-
-    .swiper {
-      width: 100%;
-      max-width: 700px;
-      margin: auto;
-      padding: 40px 0;
-    }
-
-    .swiper-slide {
-      background: #111;
-      border-radius: 20px;
-      padding: 40px 20px;
-      text-align: center;
-      box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .swiper-slide:hover {
-      transform: translateY(-10px);
-    }
-
-    .swiper-slide h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: #ffcc00; /* Impactful tagline */
-      font-weight: 500;
-    }
-
-    .swiper-slide i {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      color: #00d4ff;
-    }
-
-    .swiper-slide h2 {
-      font-size: 1.5rem;
-      margin: 5px 0;
-      color: #fff;
-    }
-
-    .swiper-slide p {
-      font-size: 1rem;
-      color: #bbb;
-    }
-
-    /* Swiper pagination dots */
-    .swiper-pagination-bullet {
-      background: #00d4ff !important;
-    }
-
-    /* Footer */
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #888;
-    }
-
-    footer .blue {
-      color: #00d4ff;
-      font-weight: 600;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- Social Media Slider -->
-  <section id="social-slider">
-    <h2 class="sub-title">Connect With Me</h2>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-
-        <div class="swiper-slide insta">
-          <h3>📸 Let’s Stay Connected</h3>
-          <i class="fab fa-instagram"></i>
-          <h2>Instagram</h2>
-          <p>@prince_mandhar</p>
-        </div>
-
-        <div class="swiper-slide linkedin">
-          <h3>💼 Build Network with Me</h3>
-          <i class="fab fa-linkedin"></i>
-          <h2>LinkedIn</h2>
-          <p>linkedin.com/in/prince</p>
-        </div>
-
-        <div class="swiper-slide x">
-          <h3>📰 Thoughts & Updates</h3>
-          <i class="fab fa-x-twitter"></i>
-          <h2>X (Twitter)</h2>
-          <p>@prince_mandhar</p>
-        </div>
-
-        <div class="swiper-slide github">
-          <h3>💻 Explore My Code</h3>
-          <i class="fab fa-github"></i>
-          <h2>GitHub</h2>
-          <p>github.com/prince</p>
-        </div>
-
-      </div>
-      <!-- Pagination Dots -->
-      <div class="swiper-pagination"></div>
+<!-- Header Section -->
+<header id="header">
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="Prince Mandhar Logo" class="logo-img">
     </div>
-  </section>
+    <ul id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <i class="fa-solid fa-ellipsis-vertical" id="menu-toggle"></i>
+    <i class="fa-solid fa-xmark" id="menu-close"></i>
+  </nav>
+  <div class="header-text">
+    <h1>Prince <span>Mandhar</span></h1>
+    <p>Data Science | Data Engineer | AI/ML | Contact for Hire</p>
+    <a href="Prince_ml__Profile.pdf" class="btn" target="_blank">Download Resume</a>
+  </div>
+</header>
 
-  <!-- Footer -->
-  <footer>
-    <p>Made by <span class="blue">Prince Mandhar</span></p>
-    <p class="blue">📧 princemandhar@gmail.com</p>
-    <p>📍 Noida, India</p>
-  </footer>
+<!-- About Section -->
+<section id="about">
+  <div class="container about-container">
+    <div class="about-col-1">
+      <div class="profile-image-container-square">
+        <img src="my.jpg" alt="Prince Mandhar">
+      </div>
+    </div>
+    <div class="about-col-2">
+      <h2 class="sub-title">Profile Summary</h2>
+      <p>
+        Business Analyst & Data Science professional with expertise in Microsoft Dynamics 365 Business Central, Python, SQL, Power BI, and Tableau. Skilled in Machine Learning, Data Engineering, and data visualization to deliver actionable insights. Experienced in building automated data pipelines, KPI dashboards, and predictive models to optimize decision-making and drive business growth.
+      </p>
+      <h3>Skills</h3>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>SQL</li>
+        <li>Power BI</li>
+        <li>Tableau</li>
+        <li>MS Excel</li>
+        <li>Google Sheets</li>
+        <li>MySQL</li>
+        <li>Pandas, NumPy</li>
+        <li>Matplotlib, Seaborn</li>
+        <li>Machine Learning</li>
+        <li>Deep Learning</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      loop: true,
-      autoplay: { delay: 2500, disableOnInteraction: false },
-      slidesPerView: 1,
-      centeredSlides: true,
-      pagination: { el: ".swiper-pagination", clickable: true },
-    });
-  </script>
+<!-- Projects Section -->
+<section id="projects">
+  <div class="container">
+    <h2 class="sub-title">Projects</h2>
+    <div class="project-list">
+      <div class="project-item">
+        <h2>Machine Learning Projects</h2>
+        <p>Hands-on ML projects using Python.</p>
+        <a href="https://github.com/PrinceMandhar/Machine-learning" target="_blank">View Project</a>
+      </div>
+      <div class="project-item">
+        <h2>Deep Learning</h2>
+        <p>Experiments with ANN, CNN, and RNN models.</p>
+        <a href="https://github.com/PrinceMandhar/Deep-learning" target="_blank">View Project</a>
+      </div>
+      <div class="project-item">
+        <h2>Data Analysis</h2>
+        <p>Python-based analysis with Pandas, Numpy, Matplotlib.</p>
+        <a href="https://github.com/PrinceMandhar/Data-Analysis-" target="_blank">View Project</a>
+      </div>
+      <div class="project-item">
+        <h2>Automated MCQ Generator</h2>
+        <p>LangChain + OpenAI API-based Question Generator.</p>
+        <a href="https://github.com/PrinceMandhar/Automated-MCQ-Generator-Using-Langchain-OpenAI-API-main" target="_blank">View Project</a>
+      </div>
+      <div class="project-item">
+        <h2>Data Analyzer App</h2>
+        <p>GUI-based Data Analyzer built with Python Tkinter + Plotly.</p>
+        <a href="https://github.com/PrinceMandhar/DataAnalyzerApp_College" target="_blank">View Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Media Slider Section -->
+<section id="social-slider">
+  <h2 class="sub-title">Connect With Me</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide insta">
+        <i class="fab fa-instagram icon"></i>
+        <h2>Instagram</h2>
+        <p>@prince_mandhar</p>
+      </div>
+      <div class="swiper-slide linkedin">
+        <i class="fab fa-linkedin icon"></i>
+        <h2>LinkedIn</h2>
+        <p>linkedin.com/in/prince</p>
+      </div>
+      <div class="swiper-slide x">
+        <i class="fab fa-x-twitter icon"></i>
+        <h2>X (Twitter)</h2>
+        <p>@prince_mandhar</p>
+      </div>
+      <div class="swiper-slide github">
+        <i class="fab fa-github icon"></i>
+        <h2>GitHub</h2>
+        <p>github.com/prince</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience">
+  <div class="container">
+    <h2 class="sub-title">Experience</h2>
+    <ul>
+      <li><strong>Business Analyst — Bhargava Phytolab</strong><br>
+      Automated reporting from Dynamics 365, built KPI dashboards in Power BI, improved forecasting accuracy by 20%.
+      </li>
+      <li><strong>Data Science Intern — iNeuron.ai</strong><br>
+      Developed ML models, feature pipelines, and end-to-end data solutions for real-world datasets.
+      </li>
+      <li><strong>Data Science Trainee — Ducat India</strong><br>
+      Completed projects on churn prediction, loan approval, and CNN-based image classification.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Contact Form Section -->
+<section id="contact">
+  <div class="container contact-container">
+    <h2 class="sub-title">Contact Me</h2>
+    <form action="mailto:princemandhar@gmail.com" method="post" enctype="text/plain" class="contact-form">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Mail</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>Made by <span class="blue">Prince Mandhar</span></p>
+  <p class="blue">📧 princemandhar@gmail.com</p>
+  <p>📍 Noida, India</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.add('active');
+  });
+
+  menuClose.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+
+  // Swiper init
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: { delay: 2500, disableOnInteraction: false },
+    slidesPerView: 1,
+    centeredSlides: true,
+  });
+</script>
+
 </body>
 </html>
