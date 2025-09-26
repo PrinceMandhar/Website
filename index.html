@@ -14,9 +14,12 @@
 
 <!-- Header Section -->
 <header id="header">
+  <div class="overlay"></div>
   <nav>
     <div class="logo">
+      <p class="impact-line">Empowering Data-Driven Decisions</p>
       <img src="logo.png" alt="Prince Mandhar Logo" class="logo-img">
+      <h1>Prince <span>Mandhar</span></h1>
     </div>
     <ul id="nav-links">
       <li><a href="#about">About</a></li>
@@ -27,11 +30,6 @@
     <i class="fa-solid fa-ellipsis-vertical" id="menu-toggle"></i>
     <i class="fa-solid fa-xmark" id="menu-close"></i>
   </nav>
-  <div class="header-text">
-    <h1>Prince <span>Mandhar</span></h1>
-    <p>Data Science | Data Engineer | AI/ML | Contact for Hire</p>
-    <a href="Prince_ml__Profile.pdf" class="btn" target="_blank">Download Resume</a>
-  </div>
 </header>
 
 <!-- About Section -->
@@ -85,44 +83,50 @@
         <p>Python-based analysis with Pandas, Numpy, Matplotlib.</p>
         <a href="https://github.com/PrinceMandhar/Data-Analysis-" target="_blank">View Project</a>
       </div>
-      <div class="project-item">
-        <h2>Automated MCQ Generator</h2>
-        <p>LangChain + OpenAI API-based Question Generator.</p>
-        <a href="https://github.com/PrinceMandhar/Automated-MCQ-Generator-Using-Langchain-OpenAI-API-main" target="_blank">View Project</a>
-      </div>
-      <div class="project-item">
-        <h2>Data Analyzer App</h2>
-        <p>GUI-based Data Analyzer built with Python Tkinter + Plotly.</p>
-        <a href="https://github.com/PrinceMandhar/DataAnalyzerApp_College" target="_blank">View Project</a>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- Social Media Slider Section -->
-<section id="social-slider">
-  <h2 class="sub-title">Connect With Me</h2>
+<!-- Sliding Cards Section -->
+<section id="slider-cards">
+  <h2 class="sub-title">Connect & Explore My Work</h2>
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide insta">
-        <i class="fab fa-instagram icon"></i>
-        <h2>Instagram</h2>
-        <p>@prince_mandhar</p>
+      <div class="swiper-slide card">
+        <div class="card-header insta"></div>
+        <div class="card-body">
+          <i class="fab fa-instagram fa-2x"></i>
+          <h3>Instagram</h3>
+          <p>@prince_mandhar</p>
+          <a href="https://www.instagram.com/prince_mandhar/" target="_blank" class="btn">Visit</a>
+        </div>
       </div>
-      <div class="swiper-slide linkedin">
-        <i class="fab fa-linkedin icon"></i>
-        <h2>LinkedIn</h2>
-        <p>linkedin.com/in/prince</p>
+      <div class="swiper-slide card">
+        <div class="card-header linkedin"></div>
+        <div class="card-body">
+          <i class="fab fa-linkedin fa-2x"></i>
+          <h3>LinkedIn</h3>
+          <p>linkedin.com/in/prince</p>
+          <a href="https://www.linkedin.com/in/prince/" target="_blank" class="btn">Visit</a>
+        </div>
       </div>
-      <div class="swiper-slide x">
-        <i class="fab fa-x-twitter icon"></i>
-        <h2>X (Twitter)</h2>
-        <p>@prince_mandhar</p>
+      <div class="swiper-slide card">
+        <div class="card-header x"></div>
+        <div class="card-body">
+          <i class="fab fa-x-twitter fa-2x"></i>
+          <h3>X (Twitter)</h3>
+          <p>@prince_mandhar</p>
+          <a href="https://twitter.com/prince_mandhar" target="_blank" class="btn">Visit</a>
+        </div>
       </div>
-      <div class="swiper-slide github">
-        <i class="fab fa-github icon"></i>
-        <h2>GitHub</h2>
-        <p>github.com/prince</p>
+      <div class="swiper-slide card">
+        <div class="card-header github"></div>
+        <div class="card-body">
+          <i class="fab fa-github fa-2x"></i>
+          <h3>GitHub</h3>
+          <p>github.com/prince</p>
+          <a href="https://github.com/PrinceMandhar" target="_blank" class="btn">Visit</a>
+        </div>
       </div>
     </div>
   </div>
@@ -133,15 +137,9 @@
   <div class="container">
     <h2 class="sub-title">Experience</h2>
     <ul>
-      <li><strong>Business Analyst — Bhargava Phytolab</strong><br>
-      Automated reporting from Dynamics 365, built KPI dashboards in Power BI, improved forecasting accuracy by 20%.
-      </li>
-      <li><strong>Data Science Intern — iNeuron.ai</strong><br>
-      Developed ML models, feature pipelines, and end-to-end data solutions for real-world datasets.
-      </li>
-      <li><strong>Data Science Trainee — Ducat India</strong><br>
-      Completed projects on churn prediction, loan approval, and CNN-based image classification.
-      </li>
+      <li><strong>Business Analyst — Bhargava Phytolab</strong><br> Automated reporting from Dynamics 365, built KPI dashboards in Power BI, improved forecasting accuracy by 20%. </li>
+      <li><strong>Data Science Intern — iNeuron.ai</strong><br> Developed ML models, feature pipelines, and end-to-end data solutions for real-world datasets. </li>
+      <li><strong>Data Science Trainee — Ducat India</strong><br> Completed projects on churn prediction, loan approval, and CNN-based image classification. </li>
     </ul>
   </div>
 </section>
@@ -173,20 +171,15 @@
   const menuClose = document.getElementById('menu-close');
   const navLinks = document.getElementById('nav-links');
 
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.add('active');
-  });
+  menuToggle.addEventListener('click', () => navLinks.classList.add('active'));
+  menuClose.addEventListener('click', () => navLinks.classList.remove('active'));
 
-  menuClose.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-  });
-
-  // Swiper init
   var swiper = new Swiper(".mySwiper", {
     loop: true,
     autoplay: { delay: 2500, disableOnInteraction: false },
     slidesPerView: 1,
     centeredSlides: true,
+    spaceBetween: 30
   });
 </script>
 
