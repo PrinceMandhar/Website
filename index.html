@@ -1,195 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prince Mandhar Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-</head>
-<body>
+<!-- Sliding Cards Section -->
+<section id="slider-cards">
+  <h2 class="sub-title">Connect & Explore My Work</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
 
-<!-- Header Section -->
-<header id="header">
-  <nav>
-    <div class="logo">
-      <h1>Prince <span>Mandhar</span></h1>
-      <p class="impact-line">Innovating with Data Science & AI</p>
-    </div>
-    <ul id="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <i class="fa-solid fa-ellipsis-vertical" id="menu-toggle"></i>
-    <i class="fa-solid fa-xmark" id="menu-close"></i>
-  </nav>
-
-  <div class="header-text">
-    <h1>Prince <span>Mandhar</span></h1>
-    <p>Data Science | Data Engineer | AI/ML | Contact for Hire</p>
-    <a href="Prince_ml__Profile.pdf" class="btn" target="_blank">Download Resume</a>
-  </div>
-</header>
-
-<!-- About Section -->
-<section id="about">
-  <div class="container about-container">
-    <div class="about-col-1">
-      <div class="profile-image-container-square">
-        <img src="my.jpg" alt="Prince Mandhar">
+      <!-- Instagram Card -->
+      <div class="swiper-slide card">
+        <i class="fab fa-instagram fa-4x"></i>
+        <h3>Instagram</h3>
+        <p>Follow me for behind-the-scenes of my projects and AI experiments.</p>
+        <a href="https://www.instagram.com/prince_mandhar/" target="_blank" class="btn">Visit</a>
       </div>
+
+      <!-- LinkedIn Card -->
+      <div class="swiper-slide card">
+        <i class="fab fa-linkedin fa-4x"></i>
+        <h3>LinkedIn</h3>
+        <p>Connect with me professionally, explore my projects & achievements.</p>
+        <a href="https://www.linkedin.com/in/prince/" target="_blank" class="btn">Visit</a>
+      </div>
+
+      <!-- X (Twitter) Card -->
+      <div class="swiper-slide card">
+        <i class="fab fa-x-twitter fa-4x"></i>
+        <h3>X (Twitter)</h3>
+        <p>Follow my updates, insights on AI, Data Science, and tech trends.</p>
+        <a href="https://twitter.com/prince_mandhar" target="_blank" class="btn">Visit</a>
+      </div>
+
+      <!-- GitHub Card -->
+      <div class="swiper-slide card">
+        <i class="fab fa-github fa-4x"></i>
+        <h3>GitHub</h3>
+        <p>Explore my repositories, ML projects, and coding experiments.</p>
+        <a href="https://github.com/PrinceMandhar" target="_blank" class="btn">Visit</a>
+      </div>
+
     </div>
-    <div class="about-col-2">
-      <h2 class="sub-title">Profile Summary</h2>
-      <p>Business Analyst & Data Science professional with expertise in Microsoft Dynamics 365 Business Central, Python, SQL, Power BI, and Tableau. Skilled in Machine Learning, Data Engineering, and data visualization to deliver actionable insights. Experienced in building automated data pipelines, KPI dashboards, and predictive models to optimize decision-making and drive business growth.</p>
-      <h3>Skills</h3>
-      <ul class="skills-list">
-        <li>Python</li>
-        <li>SQL</li>
-        <li>Power BI</li>
-        <li>Tableau</li>
-        <li>MS Excel</li>
-        <li>Google Sheets</li>
-        <li>MySQL</li>
-        <li>Pandas, NumPy</li>
-        <li>Matplotlib, Seaborn</li>
-        <li>Machine Learning</li>
-        <li>Deep Learning</li>
-      </ul>
-    </div>
+
+    <!-- Pagination Dots -->
+    <div class="swiper-pagination"></div>
   </div>
 </section>
-
-<!-- Projects Section -->
-<section id="projects">
-  <div class="container">
-    <h2 class="sub-title">Projects</h2>
-    <div class="project-list">
-      <div class="project-item">
-        <h2>Machine Learning Projects</h2>
-        <p>Hands-on ML projects using Python.</p>
-        <a href="https://github.com/PrinceMandhar/Machine-learning" target="_blank">View Project</a>
-      </div>
-      <div class="project-item">
-        <h2>Deep Learning</h2>
-        <p>Experiments with ANN, CNN, and RNN models.</p>
-        <a href="https://github.com/PrinceMandhar/Deep-learning" target="_blank">View Project</a>
-      </div>
-      <div class="project-item">
-        <h2>Data Analysis</h2>
-        <p>Python-based analysis with Pandas, Numpy, Matplotlib.</p>
-        <a href="https://github.com/PrinceMandhar/Data-Analysis-" target="_blank">View Project</a>
-      </div>
-      <div class="project-item">
-        <h2>Automated MCQ Generator</h2>
-        <p>LangChain + OpenAI API-based Question Generator.</p>
-        <a href="https://github.com/PrinceMandhar/Automated-MCQ-Generator-Using-Langchain-OpenAI-API-main" target="_blank">View Project</a>
-      </div>
-      <div class="project-item">
-        <h2>Data Analyzer App</h2>
-        <p>GUI-based Data Analyzer built with Python Tkinter + Plotly.</p>
-        <a href="https://github.com/PrinceMandhar/DataAnalyzerApp_College" target="_blank">View Project</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Experience Section -->
-<section id="experience">
-  <div class="container">
-    <h2 class="sub-title">Experience</h2>
-    <ul>
-      <li><strong>Business Analyst — Bhargava Phytolab</strong><br> Automated reporting from Dynamics 365, built KPI dashboards in Power BI, improved forecasting accuracy by 20%.</li>
-      <li><strong>Data Science Intern — iNeuron.ai</strong><br> Developed ML models, feature pipelines, and end-to-end data solutions for real-world datasets.</li>
-      <li><strong>Data Science Trainee — Ducat India</strong><br> Completed projects on churn prediction, loan approval, and CNN-based image classification.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact">
-  <div class="container contact-container">
-    <h2 class="sub-title">Contact Me</h2>
-    <form action="mailto:princemandhar@gmail.com" method="post" enctype="text/plain" class="contact-form">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Mail</button>
-    </form>
-  </div>
-</section>
-
-<!-- Social Media Cards Under Contact -->
-<section id="social-slider" style="background-color: #000; padding: 50px 0;">
-  <div class="container">
-    <h2 class="sub-title" style="text-align: center; margin-bottom: 30px;">Connect With Me</h2>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-
-        <div class="swiper-slide card">
-          <i class="fab fa-instagram fa-4x"></i>
-          <h3>Instagram</h3>
-          <p>Follow me for behind-the-scenes of my projects and AI experiments.</p>
-          <a href="https://www.instagram.com/prince_mandhar/" target="_blank" class="btn">Visit</a>
-        </div>
-
-        <div class="swiper-slide card">
-          <i class="fab fa-linkedin fa-4x"></i>
-          <h3>LinkedIn</h3>
-          <p>Connect with me professionally, explore my projects & achievements.</p>
-          <a href="https://www.linkedin.com/in/prince/" target="_blank" class="btn">Visit</a>
-        </div>
-
-        <div class="swiper-slide card">
-          <i class="fab fa-x-twitter fa-4x"></i>
-          <h3>X (Twitter)</h3>
-          <p>Follow my updates, insights on AI, Data Science, and tech trends.</p>
-          <a href="https://twitter.com/prince_mandhar" target="_blank" class="btn">Visit</a>
-        </div>
-
-        <div class="swiper-slide card">
-          <i class="fab fa-github fa-4x"></i>
-          <h3>GitHub</h3>
-          <p>Explore my repositories, ML projects, and coding experiments.</p>
-          <a href="https://github.com/PrinceMandhar" target="_blank" class="btn">Visit</a>
-        </div>
-
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>Made by <span class="blue">Prince Mandhar</span></p>
-  <p class="blue">📧 princemandhar@gmail.com</p>
-  <p>📍 Noida, India</p>
-</footer>
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: { delay: 3000, disableOnInteraction: false },
-    slidesPerView: 1,
-    centeredSlides: true,
-    spaceBetween: 30,
-    pagination: { el: ".swiper-pagination", clickable: true }
-  });
-
-  const menuToggle = document.getElementById('menu-toggle');
-  const menuClose = document.getElementById('menu-close');
-  const navLinks = document.getElementById('nav-links');
-
-  menuToggle.addEventListener('click', () => { navLinks.style.display = 'block'; });
-  menuClose.addEventListener('click', () => { navLinks.style.display = 'none'; });
-</script>
-
-</body>
-</html>
