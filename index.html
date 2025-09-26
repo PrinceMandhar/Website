@@ -1,44 +1,231 @@
-<!-- Sliding Cards Section -->
-<section id="slider-cards">
-  <h2 class="sub-title">Connect & Explore My Work</h2>
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prince Mandhar Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+/* General */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+a { text-decoration: none; color: inherit; }
 
-      <!-- Instagram Card -->
-      <div class="swiper-slide card">
-        <i class="fab fa-instagram fa-4x"></i>
-        <h3>Instagram</h3>
-        <p>Follow me for behind-the-scenes of my projects and AI experiments.</p>
-        <a href="https://www.instagram.com/prince_mandhar/" target="_blank" class="btn">Visit</a>
-      </div>
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #111;
+  position: relative;
+}
+.logo img {
+  height: 60px;
+}
+#menu-toggle, #menu-close {
+  font-size: 24px;
+  cursor: pointer;
+  color: #00bfff;
+}
+#menu-close { display: none; }
 
-      <!-- LinkedIn Card -->
-      <div class="swiper-slide card">
-        <i class="fab fa-linkedin fa-4x"></i>
-        <h3>LinkedIn</h3>
-        <p>Connect with me professionally, explore my projects & achievements.</p>
-        <a href="https://www.linkedin.com/in/prince/" target="_blank" class="btn">Visit</a>
-      </div>
+/* Sidebar */
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #111;
+  padding: 50px 20px;
+  transition: 0.3s;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  color: #00bfff;
+}
+#sidebar i { font-size: 28px; }
 
-      <!-- X (Twitter) Card -->
-      <div class="swiper-slide card">
-        <i class="fab fa-x-twitter fa-4x"></i>
-        <h3>X (Twitter)</h3>
-        <p>Follow my updates, insights on AI, Data Science, and tech trends.</p>
-        <a href="https://twitter.com/prince_mandhar" target="_blank" class="btn">Visit</a>
-      </div>
+/* Sections */
+section {
+  padding: 60px 20px;
+}
+.container { max-width: 1200px; margin: auto; }
 
-      <!-- GitHub Card -->
-      <div class="swiper-slide card">
-        <i class="fab fa-github fa-4x"></i>
-        <h3>GitHub</h3>
-        <p>Explore my repositories, ML projects, and coding experiments.</p>
-        <a href="https://github.com/PrinceMandhar" target="_blank" class="btn">Visit</a>
-      </div>
+/* About */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.about-col-1 img {
+  width: 250px;
+  border-radius: 10px;
+}
 
+/* Projects */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.project-item {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+/* Contact Form */
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-container input,
+.contact-container textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+}
+footer .blue { color: #00bfff; }
+
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="Prince Mandhar Logo">
+  </div>
+  <i class="fa-solid fa-ellipsis-vertical" id="menu-toggle"></i>
+  <i class="fa-solid fa-xmark" id="menu-close"></i>
+</header>
+
+<!-- Sidebar for Social Links -->
+<div id="sidebar">
+  <a href="https://www.instagram.com/prince_mandhar/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+  <a href="https://www.linkedin.com/in/prince/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+  <a href="https://twitter.com/prince_mandhar" target="_blank"><i class="fab fa-x-twitter"></i> X (Twitter)</a>
+  <a href="https://github.com/PrinceMandhar" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+</div>
+
+<!-- About Section -->
+<section id="about">
+  <div class="container about-container">
+    <div class="about-col-1">
+      <img src="my.jpg" alt="Prince Mandhar">
     </div>
-
-    <!-- Pagination Dots -->
-    <div class="swiper-pagination"></div>
+    <div class="about-col-2">
+      <h2>Profile Summary</h2>
+      <p>Business Analyst & Data Science professional with expertise in Microsoft Dynamics 365 Business Central, Python, SQL, Power BI, and Tableau. Skilled in Machine Learning, Data Engineering, and data visualization to deliver actionable insights. Experienced in building automated data pipelines, KPI dashboards, and predictive models to optimize decision-making and drive business growth.</p>
+      <h3>Skills</h3>
+      <ul>
+        <li>Python</li><li>SQL</li><li>Power BI</li><li>Tableau</li>
+        <li>MS Excel</li><li>Google Sheets</li><li>MySQL</li>
+        <li>Pandas, NumPy</li><li>Matplotlib, Seaborn</li>
+        <li>Machine Learning</li><li>Deep Learning</li>
+      </ul>
+    </div>
   </div>
 </section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-item">
+        <h2>Machine Learning Projects</h2>
+        <p>Hands-on ML projects using Python.</p>
+        <a href="https://github.com/PrinceMandhar/Machine-learning" target="_blank">View Project</a>
+      </div>
+      <div class="project-item">
+        <h2>Deep Learning</h2>
+        <p>Experiments with ANN, CNN, and RNN models.</p>
+        <a href="https://github.com/PrinceMandhar/Deep-learning" target="_blank">View Project</a>
+      </div>
+      <div class="project-item">
+        <h2>Data Analysis</h2>
+        <p>Python-based analysis with Pandas, Numpy, Matplotlib.</p>
+        <a href="https://github.com/PrinceMandhar/Data-Analysis-" target="_blank">View Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience">
+  <div class="container">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Business Analyst — Bhargava Phytolab</strong><br> Automated reporting from Dynamics 365, built KPI dashboards in Power BI, improved forecasting accuracy by 20%.</li>
+      <li><strong>Data Science Intern — iNeuron.ai</strong><br> Developed ML models, feature pipelines, and end-to-end data solutions for real-world datasets.</li>
+      <li><strong>Data Science Trainee — Ducat India</strong><br> Completed projects on churn prediction, loan approval, and CNN-based image classification.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <div class="container contact-container">
+    <h2>Contact Me</h2>
+    <form action="mailto:princemandhar@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Mail</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>Made by <span class="blue">Prince Mandhar</span></p>
+  <p class="blue">📧 princemandhar@gmail.com</p>
+  <p>📍 Noida, India</p>
+</footer>
+
+<!-- Scripts -->
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const menuClose = document.getElementById('menu-close');
+const sidebar = document.getElementById('sidebar');
+
+menuToggle.addEventListener('click', () => {
+  sidebar.style.right = '0';
+  menuToggle.style.display = 'none';
+  menuClose.style.display = 'inline';
+});
+menuClose.addEventListener('click', () => {
+  sidebar.style.right = '-250px';
+  menuClose.style.display = 'none';
+  menuToggle.style.display = 'inline';
+});
+</script>
+
+</body>
+</html>
