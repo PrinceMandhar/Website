@@ -350,8 +350,20 @@ function resetInterval(){
   const menuClose = document.getElementById('menu-close');
   const navLinks = document.getElementById('nav-links');
 
-  menuToggle.addEventListener('click',()=>{navLinks.style.right="0";});
-  menuClose.addEventListener('click',()=>{navLinks.style.right="-200px";});
+  /* 🔥 IMPORTANT FIX */
+  menuClose.style.display = "none";   // page load pe ❌ hide
+
+  menuToggle.addEventListener('click',()=>{
+    navLinks.style.right="0";
+    menuToggle.style.display="none";  // 3 dots hide
+    menuClose.style.display="block";  // ❌ show
+  });
+
+  menuClose.addEventListener('click',()=>{
+    navLinks.style.right="-200px";
+    menuClose.style.display="none";   // ❌ hide
+    menuToggle.style.display="block"; // 3 dots show
+  });
 
   // Tabs
   const tabButtons=document.querySelectorAll(".tab-buttons button");
@@ -365,5 +377,6 @@ function resetInterval(){
     });
   });
 </script>
+
 </body>
 </html>
