@@ -347,36 +347,35 @@ function resetInterval(){
 
 <script>
   const menuToggle = document.getElementById('menu-toggle');
-  const menuClose = document.getElementById('menu-close');
-  const navLinks = document.getElementById('nav-links');
+  const menuClose  = document.getElementById('menu-close');
+  const navLinks   = document.getElementById('nav-links');
 
-  /* 🔥 IMPORTANT FIX */
-  menuClose.style.display = "none";   // page load pe ❌ hide
+  // Initial state
+  menuClose.style.display = "none";
 
-  menuToggle.addEventListener('click',()=>{
-    navLinks.style.right="0";
-    menuToggle.style.display="none";  // 3 dots hide
-    menuClose.style.display="block";  // ❌ show
+  menuToggle.addEventListener('click', () => {
+    navLinks.style.right = "0";
+
+    // cross ko menu ke andar bhej do
+    navLinks.prepend(menuClose);
+
+    // cross ko visible + top-right set karo (JS se)
+    menuClose.style.display = "block";
+    menuClose.style.position = "absolute";
+    menuClose.style.top = "20px";
+    menuClose.style.right = "20px";
+    menuClose.style.zIndex = "9999";
+
+    menuToggle.style.display = "none";
   });
 
-  menuClose.addEventListener('click',()=>{
-    navLinks.style.right="-200px";
-    menuClose.style.display="none";   // ❌ hide
-    menuToggle.style.display="block"; // 3 dots show
-  });
-
-  // Tabs
-  const tabButtons=document.querySelectorAll(".tab-buttons button");
-  const tabContents=document.querySelectorAll(".tab-content");
-  tabButtons.forEach(btn=>{
-    btn.addEventListener("click",()=>{
-      tabButtons.forEach(b=>b.classList.remove("active"));
-      tabContents.forEach(c=>c.classList.remove("active"));
-      btn.classList.add("active");
-      document.getElementById(btn.dataset.tab).classList.add("active");
-    });
+  menuClose.addEventListener('click', () => {
+    navLinks.style.right = "-200px";
+    menuClose.style.display = "none";
+    menuToggle.style.display = "block";
   });
 </script>
+
 
 </body>
 </html>
